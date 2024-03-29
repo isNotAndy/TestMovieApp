@@ -8,17 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */; };
-		FB6E75F62BB199E500D5C117 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E75F52BB199E500D5C117 /* ContentView.swift */; };
 		FB6E75F82BB199E700D5C117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6E75F72BB199E700D5C117 /* Assets.xcassets */; };
 		FB6E75FB2BB199E700D5C117 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */; };
+		FB6E76092BB19D6100D5C117 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76082BB19D6100D5C117 /* ComposableArchitecture */; };
+		FB6E760C2BB19DCB00D5C117 /* SDAO in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E760B2BB19DCB00D5C117 /* SDAO */; };
+		FB6E76142BB1A6F700D5C117 /* ServiceCore in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76132BB1A6F700D5C117 /* ServiceCore */; };
+		FB6E76172BB1A74A00D5C117 /* HTTPTransport in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76162BB1A74A00D5C117 /* HTTPTransport */; };
+		FB6E761F2BB1AAD300D5C117 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E761E2BB1AAD300D5C117 /* Swinject */; };
+		FB6E76212BB1AAD300D5C117 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76202BB1AAD300D5C117 /* Swinject-Dynamic */; };
+		FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E762E2BB1B96200D5C117 /* PinToEdgeModifier.swift */; };
+		FB6E76312BB1BA2500D5C117 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76302BB1BA2500D5C117 /* View.swift */; };
+		FB6E76342BB1BAB300D5C117 /* SomethingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76332BB1BAB300D5C117 /* SomethingService.swift */; };
+		FB6E76382BB1BB9C00D5C117 /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76372BB1BB9C00D5C117 /* TCANetworkReducers */; };
+		FB6E763A2BB1BC3700D5C117 /* SomethingServiceImplemetation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */; };
+		FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E763C2BB1BCDB00D5C117 /* DAOAutographAliases.swift */; };
+		FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E764B2BB6A8DE00D5C117 /* Swinjectable.swift */; };
+		FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76502BB6A97200D5C117 /* AssembliesCollector.swift */; };
+		FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76522BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift */; };
+		FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76552BB6AACB00D5C117 /* CollectableAssembly.swift */; };
+		FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76572BB6AAE500D5C117 /* AssembliesHolder.swift */; };
+		FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E765A2BB6AB4000D5C117 /* DispatchQueue.swift */; };
+		FB6E765E2BB6AC1400D5C117 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E765D2BB6AC1400D5C117 /* CardView.swift */; };
+		FB7AEF672BB6B12800CF2801 /* CardInfoTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF662BB6B12800CF2801 /* CardInfoTranslator.swift */; };
+		FB7AEF6A2BB6B1E200CF2801 /* CardInfoPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF692BB6B1E200CF2801 /* CardInfoPlainObject.swift */; };
+		FB7AEF6D2BB6B46200CF2801 /* CardInfoModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF6C2BB6B46200CF2801 /* CardInfoModelObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB6E75F02BB199E500D5C117 /* TestMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieAppApp.swift; sourceTree = "<group>"; };
-		FB6E75F52BB199E500D5C117 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB6E75F72BB199E700D5C117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB6E762E2BB1B96200D5C117 /* PinToEdgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinToEdgeModifier.swift; sourceTree = "<group>"; };
+		FB6E76302BB1BA2500D5C117 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FB6E76332BB1BAB300D5C117 /* SomethingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingService.swift; sourceTree = "<group>"; };
+		FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingServiceImplemetation.swift; sourceTree = "<group>"; };
+		FB6E763C2BB1BCDB00D5C117 /* DAOAutographAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOAutographAliases.swift; sourceTree = "<group>"; };
+		FB6E764B2BB6A8DE00D5C117 /* Swinjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinjectable.swift; sourceTree = "<group>"; };
+		FB6E76502BB6A97200D5C117 /* AssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesCollector.swift; sourceTree = "<group>"; };
+		FB6E76522BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieAppAssembliesCollector.swift; sourceTree = "<group>"; };
+		FB6E76552BB6AACB00D5C117 /* CollectableAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectableAssembly.swift; sourceTree = "<group>"; };
+		FB6E76572BB6AAE500D5C117 /* AssembliesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesHolder.swift; sourceTree = "<group>"; };
+		FB6E765A2BB6AB4000D5C117 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		FB6E765D2BB6AC1400D5C117 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FB7AEF662BB6B12800CF2801 /* CardInfoTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTranslator.swift; sourceTree = "<group>"; };
+		FB7AEF692BB6B1E200CF2801 /* CardInfoPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoPlainObject.swift; sourceTree = "<group>"; };
+		FB7AEF6C2BB6B46200CF2801 /* CardInfoModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoModelObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6E76382BB1BB9C00D5C117 /* TCANetworkReducers in Frameworks */,
+				FB6E76172BB1A74A00D5C117 /* HTTPTransport in Frameworks */,
+				FB6E761F2BB1AAD300D5C117 /* Swinject in Frameworks */,
+				FB6E76092BB19D6100D5C117 /* ComposableArchitecture in Frameworks */,
+				FB6E76212BB1AAD300D5C117 /* Swinject-Dynamic in Frameworks */,
+				FB6E760C2BB19DCB00D5C117 /* SDAO in Frameworks */,
+				FB6E76142BB1A6F700D5C117 /* ServiceCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +93,12 @@
 		FB6E75F22BB199E500D5C117 /* TestMovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */,
-				FB6E75F52BB199E500D5C117 /* ContentView.swift */,
-				FB6E75F72BB199E700D5C117 /* Assets.xcassets */,
+				FB6E76492BB6A87600D5C117 /* CoreLayer */,
+				FB6E76062BB19CF700D5C117 /* BusinessLayer */,
+				FB6E76042BB19C9C00D5C117 /* Models */,
+				FB6E76022BB19BF100D5C117 /* PresentationLayer */,
+				FB6E76012BB19BCF00D5C117 /* ApplicationLayer */,
+				FB6E76032BB19C5700D5C117 /* Resourses */,
 				FB6E75F92BB199E700D5C117 /* Preview Content */,
 			);
 			path = TestMovieApp;
@@ -62,9 +107,180 @@
 		FB6E75F92BB199E700D5C117 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB6E76012BB19BCF00D5C117 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E764D2BB6A90600D5C117 /* AssembliesCollectors */,
+				FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E765C2BB6ABE200D5C117 /* CardScreen */,
+				FB6E762D2BB1B93D00D5C117 /* ViewModifier */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		FB6E76032BB19C5700D5C117 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */,
+				FB6E75F72BB199E700D5C117 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		FB6E76042BB19C9C00D5C117 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB7AEF6B2BB6B44300CF2801 /* Database */,
+				FB7AEF682BB6B1C500CF2801 /* Plains */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB6E76062BB19CF700D5C117 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E763B2BB1BCB200D5C117 /* DAO */,
+				FB6E76322BB1BA8800D5C117 /* SomeService */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		FB6E762D2BB1B93D00D5C117 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E762E2BB1B96200D5C117 /* PinToEdgeModifier.swift */,
+				FB6E76302BB1BA2500D5C117 /* View.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		FB6E76322BB1BA8800D5C117 /* SomeService */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */,
+				FB6E76352BB1BACC00D5C117 /* Protocol */,
+			);
+			path = SomeService;
+			sourceTree = "<group>";
+		};
+		FB6E76352BB1BACC00D5C117 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76332BB1BAB300D5C117 /* SomethingService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FB6E763B2BB1BCB200D5C117 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E763C2BB1BCDB00D5C117 /* DAOAutographAliases.swift */,
+				FB6E763E2BB1BD2000D5C117 /* Translators */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		FB6E763E2BB1BD2000D5C117 /* Translators */ = {
+			isa = PBXGroup;
+			children = (
+				FB7AEF662BB6B12800CF2801 /* CardInfoTranslator.swift */,
+			);
+			path = Translators;
+			sourceTree = "<group>";
+		};
+		FB6E76492BB6A87600D5C117 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76592BB6AB1800D5C117 /* Extensions */,
+				FB6E764A2BB6A88300D5C117 /* PropertyWrappers */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		FB6E764A2BB6A88300D5C117 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E764B2BB6A8DE00D5C117 /* Swinjectable.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
+		FB6E764D2BB6A90600D5C117 /* AssembliesCollectors */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E764E2BB6A93A00D5C117 /* Concrete */,
+				FB6E764F2BB6A94600D5C117 /* Protocols */,
+			);
+			path = AssembliesCollectors;
+			sourceTree = "<group>";
+		};
+		FB6E764E2BB6A93A00D5C117 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76542BB6AAB600D5C117 /* Helpers */,
+				FB6E76522BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
+		FB6E764F2BB6A94600D5C117 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76502BB6A97200D5C117 /* AssembliesCollector.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FB6E76542BB6AAB600D5C117 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E76552BB6AACB00D5C117 /* CollectableAssembly.swift */,
+				FB6E76572BB6AAE500D5C117 /* AssembliesHolder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB6E76592BB6AB1800D5C117 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E765A2BB6AB4000D5C117 /* DispatchQueue.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FB6E765C2BB6ABE200D5C117 /* CardScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E765D2BB6AC1400D5C117 /* CardView.swift */,
+			);
+			path = CardScreen;
+			sourceTree = "<group>";
+		};
+		FB7AEF682BB6B1C500CF2801 /* Plains */ = {
+			isa = PBXGroup;
+			children = (
+				FB7AEF692BB6B1E200CF2801 /* CardInfoPlainObject.swift */,
+			);
+			path = Plains;
+			sourceTree = "<group>";
+		};
+		FB7AEF6B2BB6B44300CF2801 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FB7AEF6C2BB6B46200CF2801 /* CardInfoModelObject.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +299,15 @@
 			dependencies = (
 			);
 			name = TestMovieApp;
+			packageProductDependencies = (
+				FB6E76082BB19D6100D5C117 /* ComposableArchitecture */,
+				FB6E760B2BB19DCB00D5C117 /* SDAO */,
+				FB6E76132BB1A6F700D5C117 /* ServiceCore */,
+				FB6E76162BB1A74A00D5C117 /* HTTPTransport */,
+				FB6E761E2BB1AAD300D5C117 /* Swinject */,
+				FB6E76202BB1AAD300D5C117 /* Swinject-Dynamic */,
+				FB6E76372BB1BB9C00D5C117 /* TCANetworkReducers */,
+			);
 			productName = TestMovieApp;
 			productReference = FB6E75F02BB199E500D5C117 /* TestMovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +336,14 @@
 				Base,
 			);
 			mainGroup = FB6E75E72BB199E500D5C117;
+			packageReferences = (
+				FB6E76072BB19D6100D5C117 /* XCRemoteSwiftPackageReference "TCA" */,
+				FB6E760A2BB19DCB00D5C117 /* XCRemoteSwiftPackageReference "DAO" */,
+				FB6E76122BB1A6F700D5C117 /* XCRemoteSwiftPackageReference "service-core" */,
+				FB6E76152BB1A74A00D5C117 /* XCRemoteSwiftPackageReference "http-transport" */,
+				FB6E761D2BB1AAD300D5C117 /* XCRemoteSwiftPackageReference "Swinject" */,
+				FB6E76362BB1BB9C00D5C117 /* XCRemoteSwiftPackageReference "tca-network-reducers" */,
+			);
 			productRefGroup = FB6E75F12BB199E500D5C117 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +370,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6E75F62BB199E500D5C117 /* ContentView.swift in Sources */,
+				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
+				FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */,
+				FB7AEF6D2BB6B46200CF2801 /* CardInfoModelObject.swift in Sources */,
+				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
+				FB7AEF6A2BB6B1E200CF2801 /* CardInfoPlainObject.swift in Sources */,
+				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
+				FB6E763A2BB1BC3700D5C117 /* SomethingServiceImplemetation.swift in Sources */,
+				FB7AEF672BB6B12800CF2801 /* CardInfoTranslator.swift in Sources */,
+				FB6E76342BB1BAB300D5C117 /* SomethingService.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
+				FB6E765E2BB6AC1400D5C117 /* CardView.swift in Sources */,
+				FB6E76312BB1BA2500D5C117 /* View.swift in Sources */,
+				FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */,
+				FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */,
+				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
+				FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestMovieApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestMovieApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -342,6 +591,95 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB6E76072BB19D6100D5C117 /* XCRemoteSwiftPackageReference "TCA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/TCA.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FB6E760A2BB19DCB00D5C117 /* XCRemoteSwiftPackageReference "DAO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/DAO.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FB6E76122BB1A6F700D5C117 /* XCRemoteSwiftPackageReference "service-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/service-core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FB6E76152BB1A74A00D5C117 /* XCRemoteSwiftPackageReference "http-transport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/http-transport.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FB6E761D2BB1AAD300D5C117 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FB6E76362BB1BB9C00D5C117 /* XCRemoteSwiftPackageReference "tca-network-reducers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/tca-network-reducers.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB6E76082BB19D6100D5C117 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E76072BB19D6100D5C117 /* XCRemoteSwiftPackageReference "TCA" */;
+			productName = ComposableArchitecture;
+		};
+		FB6E760B2BB19DCB00D5C117 /* SDAO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E760A2BB19DCB00D5C117 /* XCRemoteSwiftPackageReference "DAO" */;
+			productName = SDAO;
+		};
+		FB6E76132BB1A6F700D5C117 /* ServiceCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E76122BB1A6F700D5C117 /* XCRemoteSwiftPackageReference "service-core" */;
+			productName = ServiceCore;
+		};
+		FB6E76162BB1A74A00D5C117 /* HTTPTransport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E76152BB1A74A00D5C117 /* XCRemoteSwiftPackageReference "http-transport" */;
+			productName = HTTPTransport;
+		};
+		FB6E761E2BB1AAD300D5C117 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E761D2BB1AAD300D5C117 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		FB6E76202BB1AAD300D5C117 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E761D2BB1AAD300D5C117 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		FB6E76372BB1BB9C00D5C117 /* TCANetworkReducers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB6E76362BB1BB9C00D5C117 /* XCRemoteSwiftPackageReference "tca-network-reducers" */;
+			productName = TCANetworkReducers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB6E75E82BB199E500D5C117 /* Project object */;
 }

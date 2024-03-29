@@ -1,0 +1,212 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f96b619bcb2383b43d898402283924b80e2c4bae",
+        "version" : "5.4.3"
+      }
+    },
+    {
+      "identity" : "codex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/codex.git",
+      "state" : {
+        "revision" : "fa43df3cdda144ee97ad359d48f81e2d1063f81e",
+        "version" : "0.2.4"
+      }
+    },
+    {
+      "identity" : "combine-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/combine-extensions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "200e01af030921bcc62a4910143cd624c7c30f93"
+      }
+    },
+    {
+      "identity" : "combine-schedulers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/combine-schedulers",
+      "state" : {
+        "revision" : "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "dao",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/DAO.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "635dcd414858a32fb8a27ff9ae2ec85dc75277ea"
+      }
+    },
+    {
+      "identity" : "http-transport",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/http-transport.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e0b14eaebbad8e1bf4db1155880d2dd598cd2f6f"
+      }
+    },
+    {
+      "identity" : "monreau",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/Monreau.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "4bfd942f1c7e1d1eb703c896383acb662a42d425"
+      }
+    },
+    {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core.git",
+      "state" : {
+        "revision" : "374dd672af357732dccc135fecc905406fec3223",
+        "version" : "14.4.1"
+      }
+    },
+    {
+      "identity" : "realm-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-swift.git",
+      "state" : {
+        "revision" : "e0c2fbb442979fbf1e4be80e01d142f310a9c762",
+        "version" : "10.49.1"
+      }
+    },
+    {
+      "identity" : "service-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/service-core.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "800251a3948e10f9a9f541fd026be31c6fc93daf"
+      }
+    },
+    {
+      "identity" : "swift-case-paths",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-case-paths",
+      "state" : {
+        "revision" : "e593aba2c6222daad7c4f2732a431eed2c09bb07",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "swift-clocks",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-clocks",
+      "state" : {
+        "revision" : "a8421d68068d8f45fbceb418fbf22c5dad4afd33",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "bb5059bde9022d69ac516803f4f227d8ac967f71",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-custom-dump",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-custom-dump",
+      "state" : {
+        "revision" : "f01efb26f3a192a0e88dcdb7c3c391ec2fc25d9c",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "swift-dependencies",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-dependencies",
+      "state" : {
+        "revision" : "d3a5af3038a09add4d7682f66555d6212058a3c0",
+        "version" : "1.2.2"
+      }
+    },
+    {
+      "identity" : "swift-identified-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-identified-collections",
+      "state" : {
+        "revision" : "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax",
+      "state" : {
+        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
+        "version" : "510.0.1"
+      }
+    },
+    {
+      "identity" : "swiftui-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swiftui-navigation",
+      "state" : {
+        "revision" : "d9e72f3083c08375794afa216fb2f89c0114f303",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "36c30fa98d91408cfab1458557843cc879d74412"
+      }
+    },
+    {
+      "identity" : "tca",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/TCA.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2ecb2f2e9fc7824efacb979b8da436dbbefe4ea4"
+      }
+    },
+    {
+      "identity" : "tca-network-reducers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/tca-network-reducers.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f7bfed11f7b459157e73d81beb7f58db656c5c98"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "b13b1d1a8e787a5ffc71ac19dcaf52183ab27ba2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}

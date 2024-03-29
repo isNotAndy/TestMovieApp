@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TestMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardView()
         }
     }
 }
