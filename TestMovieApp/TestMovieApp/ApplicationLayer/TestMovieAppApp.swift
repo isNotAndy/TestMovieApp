@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct TestMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            CardView()
+            CardListView(store: Store(initialState: CardListState(), reducer: CardListReducer()))
         }
     }
 }
