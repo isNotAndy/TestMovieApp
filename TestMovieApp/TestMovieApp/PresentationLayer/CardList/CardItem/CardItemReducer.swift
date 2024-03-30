@@ -8,13 +8,15 @@
 import Foundation
 import ComposableArchitecture
 
+// MARK: - CardItemReducer
+
 public struct CardItemReducer: Reducer {
+    
+    // MARK: - Reducer
     
     public var body: some Reducer<CardItemState, CardItemAction> {
         Reduce { state, action in
             switch action {
-            case .itemTapped:
-                return .none
             default:
                 break
             }

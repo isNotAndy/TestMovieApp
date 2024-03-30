@@ -7,27 +7,29 @@
 
 import Foundation
 
+// MARK: - CardItemState
+
 public struct CardItemState: Equatable, Identifiable {
     
     // MARK: - Properties
     
     /// Unique identifier
-    public let id: String = ""
+    public var id: String = ""
     
-    /// Title value
+    /// Title of value
     public var title: String = ""
     
-    /// Description value
+    /// Description of value
     public var description: String = ""
 }
 
-//// MARK: - Initializers
-//
-//extension CardItemState {
-//    
-//    public init(plain: CardInfoPlainObject) {
-//        self.id = plain.id
-//        self.title = plain.frontTitle
-//        self.description = plain.backTitle
-//    }
-//}
+// MARK: - Initializers
+
+extension CardItemState {
+    
+    public init(plain: CardInfoPlainObject) {
+        self.id = plain.id
+        self.title = plain.frontTitle
+        self.description = plain.backTitle
+    }
+}

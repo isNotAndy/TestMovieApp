@@ -1,5 +1,5 @@
 //
-//  SomethingServiceImplemetation.swift
+//  FillingCardServiceImplemetation.swift
 //  TestMovieApp
 //
 //  Created by Andrey Barsukov on 25.03.2024.
@@ -14,7 +14,7 @@ import TCANetworkReducers
 
 // MARK: - Implementation
 
-public final class Implementation: WebService {
+public final class FillingCardServiceImplementation: WebService {
     
     // MARK: - Property
     
@@ -29,6 +29,6 @@ public final class Implementation: WebService {
 
 // MARK: - Protocol
 
-extension Implementation: SomethingService {
+extension FillingCardServiceImplementation: FillingCardService {
     
 }

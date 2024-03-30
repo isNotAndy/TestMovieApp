@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - CardItemAction
+
 public enum CardItemAction: Equatable {
     
     // MARK: - Cases

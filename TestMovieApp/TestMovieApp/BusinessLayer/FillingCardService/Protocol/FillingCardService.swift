@@ -1,5 +1,5 @@
 //
-//  SomethingService.swift
+//  FillingCardService.swift
 //  TestMovieApp
 //
 //  Created by Andrey Barsukov on 25.03.2024.
@@ -11,11 +11,11 @@ import TCANetworkReducers
 
 // MARK: - Aliases
 
-public typealias SomethingServiceError = NSError
+public typealias FillingCardServiceError = NSError
 
 // MARK: - SomethingServiceAction
 
-public enum SomethingServiceAction: Equatable {
+public enum FillingCardServiceAction: Equatable {
     
     // MARK: - Cases
     
@@ -23,6 +23,6 @@ public enum SomethingServiceAction: Equatable {
 
 // MARK: - SomethingService
 
-public protocol SomethingService {
+public protocol FillingCardService {
     
 }

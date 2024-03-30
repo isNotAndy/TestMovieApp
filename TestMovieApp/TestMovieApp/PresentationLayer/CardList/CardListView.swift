@@ -9,21 +9,39 @@ import Foundation
 import ComposableArchitecture
 import SwiftUI
 
+// MARK: - CardListView
+
 public struct CardListView: View {
     
     // MARK: - Properties
     
     public let store: StoreOf<CardListReducer>
     
+    // MARK: - View
+    
     public var body: some View {
         WithViewStore(store) { viewStore in
-            ForEachStore(
-                store.scope(
-                    state: \.items,
-                    action: CardListAction.item
-                ),
-                content: CardItemView.init
-            )
+            List {
+                VStack(spacing: 4) {
+                    TextField("Enter frontSide name", text: viewStore.$frontSide)
+                        .textFieldStyle(.roundedBorder)
+                    TextField("Enter backSide name", text: viewStore.$backSide)
+                        .textFieldStyle(.roundedBorder)
+                    Button {
+                        viewStore.send(.buttonPressed(viewStore.frontSide, viewStore.backSide))
+                    } label: {
+                        Text("add card")
+                    }
+                    .padding()
+                }
+                ForEachStore(
+                    store.scope(
+                        state: \.items,
+                        action: CardListAction.item
+                    ),
+                    content: CardItemView.init
+                )
+            }
         }
     }
 }
