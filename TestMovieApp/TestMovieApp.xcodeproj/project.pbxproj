@@ -18,9 +18,9 @@
 		FB6E76212BB1AAD300D5C117 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76202BB1AAD300D5C117 /* Swinject-Dynamic */; };
 		FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E762E2BB1B96200D5C117 /* PinToEdgeModifier.swift */; };
 		FB6E76312BB1BA2500D5C117 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76302BB1BA2500D5C117 /* View.swift */; };
-		FB6E76342BB1BAB300D5C117 /* SomethingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76332BB1BAB300D5C117 /* SomethingService.swift */; };
+		FB6E76342BB1BAB300D5C117 /* FillingCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76332BB1BAB300D5C117 /* FillingCardService.swift */; };
 		FB6E76382BB1BB9C00D5C117 /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FB6E76372BB1BB9C00D5C117 /* TCANetworkReducers */; };
-		FB6E763A2BB1BC3700D5C117 /* SomethingServiceImplemetation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */; };
+		FB6E763A2BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76392BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift */; };
 		FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E763C2BB1BCDB00D5C117 /* DAOAutographAliases.swift */; };
 		FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E764B2BB6A8DE00D5C117 /* Swinjectable.swift */; };
 		FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E76502BB6A97200D5C117 /* AssembliesCollector.swift */; };
@@ -48,8 +48,8 @@
 		FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB6E762E2BB1B96200D5C117 /* PinToEdgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinToEdgeModifier.swift; sourceTree = "<group>"; };
 		FB6E76302BB1BA2500D5C117 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		FB6E76332BB1BAB300D5C117 /* SomethingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingService.swift; sourceTree = "<group>"; };
-		FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingServiceImplemetation.swift; sourceTree = "<group>"; };
+		FB6E76332BB1BAB300D5C117 /* FillingCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillingCardService.swift; sourceTree = "<group>"; };
+		FB6E76392BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillingCardServiceImplemetation.swift; sourceTree = "<group>"; };
 		FB6E763C2BB1BCDB00D5C117 /* DAOAutographAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOAutographAliases.swift; sourceTree = "<group>"; };
 		FB6E764B2BB6A8DE00D5C117 /* Swinjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinjectable.swift; sourceTree = "<group>"; };
 		FB6E76502BB6A97200D5C117 /* AssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesCollector.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				FB6E763B2BB1BCB200D5C117 /* DAO */,
-				FB6E76322BB1BA8800D5C117 /* SomeService */,
+				FB6E76322BB1BA8800D5C117 /* FillingCardService */,
 			);
 			path = BusinessLayer;
 			sourceTree = "<group>";
@@ -179,19 +179,19 @@
 			path = ViewModifier;
 			sourceTree = "<group>";
 		};
-		FB6E76322BB1BA8800D5C117 /* SomeService */ = {
+		FB6E76322BB1BA8800D5C117 /* FillingCardService */ = {
 			isa = PBXGroup;
 			children = (
-				FB6E76392BB1BC3700D5C117 /* SomethingServiceImplemetation.swift */,
+				FB6E76392BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift */,
 				FB6E76352BB1BACC00D5C117 /* Protocol */,
 			);
-			path = SomeService;
+			path = FillingCardService;
 			sourceTree = "<group>";
 		};
 		FB6E76352BB1BACC00D5C117 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				FB6E76332BB1BAB300D5C117 /* SomethingService.swift */,
+				FB6E76332BB1BAB300D5C117 /* FillingCardService.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -406,10 +406,10 @@
 				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
 				FB7AEF6A2BB6B1E200CF2801 /* CardInfoPlainObject.swift in Sources */,
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
-				FB6E763A2BB1BC3700D5C117 /* SomethingServiceImplemetation.swift in Sources */,
+				FB6E763A2BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift in Sources */,
 				FB7AEF672BB6B12800CF2801 /* CardInfoTranslator.swift in Sources */,
 				FB7AEF7A2BB6C8E600CF2801 /* CardListReducer.swift in Sources */,
-				FB6E76342BB1BAB300D5C117 /* SomethingService.swift in Sources */,
+				FB6E76342BB1BAB300D5C117 /* FillingCardService.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
 				FB6E765E2BB6AC1400D5C117 /* CardItemView.swift in Sources */,
 				FB7AEF732BB6BD1C00CF2801 /* CardItemReducer.swift in Sources */,
