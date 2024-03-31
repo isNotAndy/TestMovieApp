@@ -26,13 +26,13 @@ public struct CardListReducer: Reducer {
                 return .none
             case .buttonPressed(var frontSide, var backSide):
                 let id = UUID().uuidString
+                state.count += 1
                 state.items.insert(CardItemState(
                     id: id,
                     title: frontSide,
                     description: backSide), at: 0)
                 state.frontSide = ""
                 state.backSide = ""
-                return .none
             default:
                 break
             }

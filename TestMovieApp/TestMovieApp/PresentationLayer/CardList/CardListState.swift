@@ -14,13 +14,8 @@ public struct CardListState: Equatable {
     
     // MARK: - Properties
     
-    // MARK: - Binding
-    
-    /// Title of card
-    @BindingState public var frontSide: String = ""
-    
-    /// Description of Card
-    @BindingState public var backSide: String = ""
+    /// Count of `CardItem`
+    public var count: Int = 0
     
     // MARK: - Children
     
@@ -29,4 +24,12 @@ public struct CardListState: Equatable {
     /// The `items` property is of type `IdentifiedArrayOf<CardItemState>`, where `CardItemState` is a type
     /// describing the state of individual cells in the interactive list.
     public var items: IdentifiedArrayOf<CardItemState> = []
+    
+    // MARK: - Binding
+    
+    /// Title of card
+    @BindingState public var frontSide: String = ""
+    
+    /// Description of card
+    @BindingState public var backSide: String = ""
 }

@@ -27,6 +27,7 @@ public struct CardListView: View {
                         .textFieldStyle(.roundedBorder)
                     TextField("Enter backSide name", text: viewStore.$backSide)
                         .textFieldStyle(.roundedBorder)
+                    Text("Cards in Desk \(viewStore.count)")
                     Button {
                         viewStore.send(.buttonPressed(viewStore.frontSide, viewStore.backSide))
                     } label: {

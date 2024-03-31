@@ -39,6 +39,15 @@
 		FB7AEF782BB6C87F00CF2801 /* CardListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF772BB6C87F00CF2801 /* CardListAction.swift */; };
 		FB7AEF7A2BB6C8E600CF2801 /* CardListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF792BB6C8E600CF2801 /* CardListReducer.swift */; };
 		FB7AEF7C2BB6C8F200CF2801 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF7B2BB6C8F200CF2801 /* CardListView.swift */; };
+		FBC3101E2BB80E9000CB1FE3 /* DeskListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3101D2BB80E9000CB1FE3 /* DeskListState.swift */; };
+		FBC310202BB80EA000CB1FE3 /* DeskListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3101F2BB80EA000CB1FE3 /* DeskListAction.swift */; };
+		FBC310222BB80EAF00CB1FE3 /* DeskListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC310212BB80EAF00CB1FE3 /* DeskListReducer.swift */; };
+		FBC310242BB80EB800CB1FE3 /* DeskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC310232BB80EB800CB1FE3 /* DeskListView.swift */; };
+		FBC310272BB82DE000CB1FE3 /* DeskItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC310262BB82DE000CB1FE3 /* DeskItemState.swift */; };
+		FBC310292BB82DEC00CB1FE3 /* DeskItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC310282BB82DEC00CB1FE3 /* DeskItemAction.swift */; };
+		FBC3102B2BB82DF500CB1FE3 /* DeskItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102A2BB82DF500CB1FE3 /* DeskItemReducer.swift */; };
+		FBC3102D2BB82E0600CB1FE3 /* DeskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102C2BB82E0600CB1FE3 /* DeskItemView.swift */; };
+		FBC3102F2BB83C9300CB1FE3 /* DeskInfoPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeskInfoPlainObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +77,15 @@
 		FB7AEF772BB6C87F00CF2801 /* CardListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListAction.swift; sourceTree = "<group>"; };
 		FB7AEF792BB6C8E600CF2801 /* CardListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListReducer.swift; sourceTree = "<group>"; };
 		FB7AEF7B2BB6C8F200CF2801 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		FBC3101D2BB80E9000CB1FE3 /* DeskListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskListState.swift; sourceTree = "<group>"; };
+		FBC3101F2BB80EA000CB1FE3 /* DeskListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskListAction.swift; sourceTree = "<group>"; };
+		FBC310212BB80EAF00CB1FE3 /* DeskListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskListReducer.swift; sourceTree = "<group>"; };
+		FBC310232BB80EB800CB1FE3 /* DeskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskListView.swift; sourceTree = "<group>"; };
+		FBC310262BB82DE000CB1FE3 /* DeskItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskItemState.swift; sourceTree = "<group>"; };
+		FBC310282BB82DEC00CB1FE3 /* DeskItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskItemAction.swift; sourceTree = "<group>"; };
+		FBC3102A2BB82DF500CB1FE3 /* DeskItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskItemReducer.swift; sourceTree = "<group>"; };
+		FBC3102C2BB82E0600CB1FE3 /* DeskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskItemView.swift; sourceTree = "<group>"; };
+		FBC3102E2BB83C9300CB1FE3 /* DeskInfoPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskInfoPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +156,7 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBC3101C2BB80E3100CB1FE3 /* DeskList */,
 				FB6E765C2BB6ABE200D5C117 /* CardList */,
 			);
 			path = PresentationLayer;
@@ -289,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				FB7AEF692BB6B1E200CF2801 /* CardInfoPlainObject.swift */,
+				FBC3102E2BB83C9300CB1FE3 /* DeskInfoPlainObject.swift */,
 			);
 			path = Plains;
 			sourceTree = "<group>";
@@ -310,6 +330,29 @@
 				FB6E765D2BB6AC1400D5C117 /* CardItemView.swift */,
 			);
 			path = CardItem;
+			sourceTree = "<group>";
+		};
+		FBC3101C2BB80E3100CB1FE3 /* DeskList */ = {
+			isa = PBXGroup;
+			children = (
+				FBC3101D2BB80E9000CB1FE3 /* DeskListState.swift */,
+				FBC3101F2BB80EA000CB1FE3 /* DeskListAction.swift */,
+				FBC310212BB80EAF00CB1FE3 /* DeskListReducer.swift */,
+				FBC310232BB80EB800CB1FE3 /* DeskListView.swift */,
+				FBC310252BB82DC000CB1FE3 /* DeskItem */,
+			);
+			path = DeskList;
+			sourceTree = "<group>";
+		};
+		FBC310252BB82DC000CB1FE3 /* DeskItem */ = {
+			isa = PBXGroup;
+			children = (
+				FBC310262BB82DE000CB1FE3 /* DeskItemState.swift */,
+				FBC310282BB82DEC00CB1FE3 /* DeskItemAction.swift */,
+				FBC3102A2BB82DF500CB1FE3 /* DeskItemReducer.swift */,
+				FBC3102C2BB82E0600CB1FE3 /* DeskItemView.swift */,
+			);
+			path = DeskItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7AEF7C2BB6C8F200CF2801 /* CardListView.swift in Sources */,
+				FBC310202BB80EA000CB1FE3 /* DeskListAction.swift in Sources */,
 				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
 				FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */,
 				FB7AEF6D2BB6B46200CF2801 /* CardInfoModelObject.swift in Sources */,
@@ -408,18 +452,26 @@
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
 				FB6E763A2BB1BC3700D5C117 /* FillingCardServiceImplemetation.swift in Sources */,
 				FB7AEF672BB6B12800CF2801 /* CardInfoTranslator.swift in Sources */,
+				FBC3102B2BB82DF500CB1FE3 /* DeskItemReducer.swift in Sources */,
+				FBC3102D2BB82E0600CB1FE3 /* DeskItemView.swift in Sources */,
 				FB7AEF7A2BB6C8E600CF2801 /* CardListReducer.swift in Sources */,
 				FB6E76342BB1BAB300D5C117 /* FillingCardService.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
 				FB6E765E2BB6AC1400D5C117 /* CardItemView.swift in Sources */,
 				FB7AEF732BB6BD1C00CF2801 /* CardItemReducer.swift in Sources */,
 				FB6E76312BB1BA2500D5C117 /* View.swift in Sources */,
+				FBC3102F2BB83C9300CB1FE3 /* DeskInfoPlainObject.swift in Sources */,
 				FB7AEF762BB6C85600CF2801 /* CardListState.swift in Sources */,
+				FBC310272BB82DE000CB1FE3 /* DeskItemState.swift in Sources */,
+				FBC310222BB80EAF00CB1FE3 /* DeskListReducer.swift in Sources */,
 				FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */,
 				FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */,
+				FBC3101E2BB80E9000CB1FE3 /* DeskListState.swift in Sources */,
 				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
 				FB7AEF782BB6C87F00CF2801 /* CardListAction.swift in Sources */,
 				FB7AEF6F2BB6BCFD00CF2801 /* CardItemState.swift in Sources */,
+				FBC310242BB80EB800CB1FE3 /* DeskListView.swift in Sources */,
+				FBC310292BB82DEC00CB1FE3 /* DeskItemAction.swift in Sources */,
 				FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */,
 				FB7AEF712BB6BD1100CF2801 /* CardItemAction.swift in Sources */,
 			);

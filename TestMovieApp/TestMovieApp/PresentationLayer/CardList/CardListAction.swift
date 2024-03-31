@@ -20,13 +20,15 @@ public enum CardListAction: Equatable, BindableAction {
     /// An action that triggers the deletion of one or more items from the list.
     case deleteItemTapped
     
+    /// Button was pressed
+    case buttonPressed(String, String)
+    
+    // MARK: - Children
+    
     /// An action that triggers a specific action on a single item in the list.
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
     case item(id: CardItemState.ID, action: CardItemAction)
-    
-    /// Button was pressed
-    case buttonPressed(String, String)
     
     // MARK: - Binding
     
