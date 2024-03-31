@@ -38,20 +38,13 @@ public struct DeskListView: View {
                             state: \.items,
                             action: DeskListAction.item
                         ),
-                        content: DeskItemView.init
-                    )
-                    .background(
-                        NavigationLinkStore(
-                            store.scope(
-                                state: \.$cardList,
-                                action: DeskListAction.cardList
-                            ),
-                            onTap: {viewStore.send(.deskPressed)},
-                            destination: CardListView.init,
-                            label: {
-                                EmptyView()
-                            }
-                        )
+                        content: { itemStore in
+                            NavigationLink(
+                                destination: CardListView(store: Store(initialState: CardListState(), reducer: CardListReducer())),
+                                label: {
+                                    DeskItemView(store: itemStore)
+                                })
+                        }
                     )
                 }
             }
