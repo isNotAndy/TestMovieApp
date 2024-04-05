@@ -21,7 +21,7 @@ public final class CardServiceMock: WebService {
     private let dao: CardDAO
     
     /// Default initializer
-    public init(dao: CardDAO) {
+    public init(transport: HTTPTransport, dao: CardDAO) {
         self.dao = dao
         super.init(baseURL: URL(fileURLWithPath: ""), transport: HTTPTransport())
     }

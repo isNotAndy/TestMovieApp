@@ -13,15 +13,15 @@ import SDAO
 
 // MARK: - DeckServicesMock
 
-public final class DeckServicesMock: WebService {
+public final class DeckServiceMock: WebService {
     
     // MARK: - Property
     
     /// CardDAO instnce
-    private let dao: CardDAO
+    private let dao: DeckDAO
     
     /// Default initializer
-    public init(dao: CardDAO) {
+    public init(transport: HTTPTransport, dao: DeckDAO) {
         self.dao = dao
         super.init(baseURL: AppConstants.Network.apiURL, transport: HTTPTransport())
     }
@@ -29,6 +29,6 @@ public final class DeckServicesMock: WebService {
 
 // MARK: - CardService
 
-extension DeckServicesMock: DeckService {
+extension DeckServiceMock: DeckService {
 
 }
