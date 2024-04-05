@@ -17,7 +17,7 @@ public final class CardServiceMock: WebService {
     
     // MARK: - Property
     
-    /// NumberInfoDAO instnce
+    /// CardDAO instnce
     private let dao: CardDAO
     
     /// Default initializer
