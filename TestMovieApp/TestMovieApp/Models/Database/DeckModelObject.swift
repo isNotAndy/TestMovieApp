@@ -23,4 +23,7 @@ public final class DeckModelObject: RealmModel {
 
     /// Count of card
     @objc dynamic public var count = 0
+    
+    /// Array of `cards` in `deck`
+    public var cards = [CardPlainObject]()
 }

@@ -41,7 +41,8 @@ extension DeckTranslator: Translator {
         DeckPlainObject(
             id: model.id,
             title: model.title,
-            count: model.count
+            count: model.count,
+            cards: model.cards
         )
     }
     

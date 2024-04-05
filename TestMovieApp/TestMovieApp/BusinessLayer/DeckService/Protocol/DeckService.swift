@@ -29,7 +29,7 @@ public protocol DeckService {
     
     /// Function to add a deck.
     /// - Returns: A service call for adding a deck.
-    func addDeck(with title: String, and id: String) -> ServiceCall<DeckPlainObject>
+    func addDeck(with title: String, and id: String, and cards: [CardPlainObject]) -> ServiceCall<DeckPlainObject>
     
     /// Function to remove a deck.
     /// - Parameter id: The ID of the card to remove.
