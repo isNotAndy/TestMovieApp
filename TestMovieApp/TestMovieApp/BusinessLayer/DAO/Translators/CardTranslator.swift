@@ -20,10 +20,10 @@ public final class CardTranslator {
     
     // MARK: - Property
     
-    /// CardInfo storage
-    private lazy var cardInfoStorage = RealmStorage<CardModelObject>(configuration: self.configuration)
+    /// Card storage
+    private lazy var cardStorage = RealmStorage<CardModelObject>(configuration: self.configuration)
     
-    /// RealConfiguration instance
+    /// RealmConfiguration instance
     private let configuration: RealmConfiguration
     
     // MARK: - Initializers
@@ -46,7 +46,7 @@ extension CardTranslator: Translator {
     }
     
     public func translate(plain: PlainModel) throws -> DatabaseModel {
-        let model = try cardInfoStorage.read(byPrimaryKey: plain.uniqueId.rawValue) ?? DatabaseModel()
+        let model = try cardStorage.read(byPrimaryKey: plain.uniqueId.rawValue) ?? DatabaseModel()
         try translate(from: plain, to: model)
         return model
     }

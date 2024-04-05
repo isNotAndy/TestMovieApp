@@ -11,6 +11,8 @@
 		FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2461042BBEA9A000C17D19 /* CardServiceMock.swift */; };
 		FB24610F2BBFE2D000C17D19 /* DeckModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24610E2BBFE2D000C17D19 /* DeckModelObject.swift */; };
 		FB2461112BBFE4FB00C17D19 /* DeckTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2461102BBFE4FB00C17D19 /* DeckTranslator.swift */; };
+		FB2461132BBFE9BD00C17D19 /* DeckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2461122BBFE9BD00C17D19 /* DeckService.swift */; };
+		FB2461152BBFE9E800C17D19 /* DeckServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2461142BBFE9E800C17D19 /* DeckServiceMock.swift */; };
 		FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */; };
 		FB6E75F82BB199E700D5C117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6E75F72BB199E700D5C117 /* Assets.xcassets */; };
 		FB6E75FB2BB199E700D5C117 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6E75FA2BB199E700D5C117 /* Preview Assets.xcassets */; };
@@ -33,6 +35,11 @@
 		FB7AEF672BB6B12800CF2801 /* CardTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF662BB6B12800CF2801 /* CardTranslator.swift */; };
 		FB7AEF6A2BB6B1E200CF2801 /* CardPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF692BB6B1E200CF2801 /* CardPlainObject.swift */; };
 		FB7AEF6D2BB6B46200CF2801 /* CardModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEF6C2BB6B46200CF2801 /* CardModelObject.swift */; };
+		FBAC7A932BBFEE30007BD0CF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A922BBFEE30007BD0CF /* AppConstants.swift */; };
+		FBAC7A962BBFF181007BD0CF /* DAOAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A952BBFF181007BD0CF /* DAOAssembly.swift */; };
+		FBAC7A982BBFF381007BD0CF /* SeviecesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A972BBFF381007BD0CF /* SeviecesAssembly.swift */; };
+		FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A992BBFF63E007BD0CF /* TranslatorsAssembly.swift */; };
+		FBAC7A9C2BBFF685007BD0CF /* InfrastructureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A9B2BBFF685007BD0CF /* InfrastructureAssembly.swift */; };
 		FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +48,8 @@
 		FB2461042BBEA9A000C17D19 /* CardServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceMock.swift; sourceTree = "<group>"; };
 		FB24610E2BBFE2D000C17D19 /* DeckModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckModelObject.swift; sourceTree = "<group>"; };
 		FB2461102BBFE4FB00C17D19 /* DeckTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTranslator.swift; sourceTree = "<group>"; };
+		FB2461122BBFE9BD00C17D19 /* DeckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckService.swift; sourceTree = "<group>"; };
+		FB2461142BBFE9E800C17D19 /* DeckServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckServiceMock.swift; sourceTree = "<group>"; };
 		FB6E75F02BB199E500D5C117 /* TestMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieAppApp.swift; sourceTree = "<group>"; };
 		FB6E75F72BB199E700D5C117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +66,11 @@
 		FB7AEF662BB6B12800CF2801 /* CardTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTranslator.swift; sourceTree = "<group>"; };
 		FB7AEF692BB6B1E200CF2801 /* CardPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlainObject.swift; sourceTree = "<group>"; };
 		FB7AEF6C2BB6B46200CF2801 /* CardModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelObject.swift; sourceTree = "<group>"; };
+		FBAC7A922BBFEE30007BD0CF /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FBAC7A952BBFF181007BD0CF /* DAOAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOAssembly.swift; sourceTree = "<group>"; };
+		FBAC7A972BBFF381007BD0CF /* SeviecesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeviecesAssembly.swift; sourceTree = "<group>"; };
+		FBAC7A992BBFF63E007BD0CF /* TranslatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorsAssembly.swift; sourceTree = "<group>"; };
+		FBAC7A9B2BBFF685007BD0CF /* InfrastructureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureAssembly.swift; sourceTree = "<group>"; };
 		FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,13 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB2460FF2BBEA77A00C17D19 /* ObtainCardItemService */ = {
+		FB2460FF2BBEA77A00C17D19 /* CardService */ = {
 			isa = PBXGroup;
 			children = (
-				FB2461012BBEA81600C17D19 /* Protocol */,
 				FB2461002BBEA80F00C17D19 /* Concrete */,
+				FB2461012BBEA81600C17D19 /* Protocol */,
 			);
-			path = ObtainCardItemService;
+			path = CardService;
 			sourceTree = "<group>";
 		};
 		FB2461002BBEA80F00C17D19 /* Concrete */ = {
@@ -101,6 +115,31 @@
 				FB2461022BBEA84300C17D19 /* CardService.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FB2461162BBFEA8B00C17D19 /* DeckService */ = {
+			isa = PBXGroup;
+			children = (
+				FB2461182BBFEA9E00C17D19 /* Concrete */,
+				FB2461172BBFEA9800C17D19 /* Protocol */,
+			);
+			path = DeckService;
+			sourceTree = "<group>";
+		};
+		FB2461172BBFEA9800C17D19 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FB2461122BBFE9BD00C17D19 /* DeckService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FB2461182BBFEA9E00C17D19 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				FB2461142BBFE9E800C17D19 /* DeckServiceMock.swift */,
+			);
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 		FB6E75E72BB199E500D5C117 = {
@@ -145,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FB6E75F32BB199E500D5C117 /* TestMovieAppApp.swift */,
+				FBAC7A912BBFEE0A007BD0CF /* AppConstants */,
 				FB6E764D2BB6A90600D5C117 /* AssembliesCollectors */,
 			);
 			path = ApplicationLayer;
@@ -178,7 +218,9 @@
 		FB6E76062BB19CF700D5C117 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FB2460FF2BBEA77A00C17D19 /* ObtainCardItemService */,
+				FBAC7A942BBFF157007BD0CF /* Assemblies */,
+				FB2461162BBFEA8B00C17D19 /* DeckService */,
+				FB2460FF2BBEA77A00C17D19 /* CardService */,
 				FB6E763B2BB1BCB200D5C117 /* DAO */,
 			);
 			path = BusinessLayer;
@@ -289,6 +331,25 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		FBAC7A912BBFEE0A007BD0CF /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7A922BBFEE30007BD0CF /* AppConstants.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		FBAC7A942BBFF157007BD0CF /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7A952BBFF181007BD0CF /* DAOAssembly.swift */,
+				FBAC7A972BBFF381007BD0CF /* SeviecesAssembly.swift */,
+				FBAC7A992BBFF63E007BD0CF /* TranslatorsAssembly.swift */,
+				FBAC7A9B2BBFF685007BD0CF /* InfrastructureAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,18 +438,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
+				FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */,
 				FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */,
 				FB7AEF6D2BB6B46200CF2801 /* CardModelObject.swift in Sources */,
 				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
+				FBAC7A932BBFEE30007BD0CF /* AppConstants.swift in Sources */,
 				FB7AEF6A2BB6B1E200CF2801 /* CardPlainObject.swift in Sources */,
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
 				FB7AEF672BB6B12800CF2801 /* CardTranslator.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
 				FB2461032BBEA84300C17D19 /* CardService.swift in Sources */,
+				FBAC7A962BBFF181007BD0CF /* DAOAssembly.swift in Sources */,
+				FBAC7A982BBFF381007BD0CF /* SeviecesAssembly.swift in Sources */,
 				FB24610F2BBFE2D000C17D19 /* DeckModelObject.swift in Sources */,
 				FB6E76312BB1BA2500D5C117 /* View.swift in Sources */,
 				FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */,
+				FB2461132BBFE9BD00C17D19 /* DeckService.swift in Sources */,
+				FBAC7A9C2BBFF685007BD0CF /* InfrastructureAssembly.swift in Sources */,
 				FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */,
+				FB2461152BBFE9E800C17D19 /* DeckServiceMock.swift in Sources */,
 				FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */,
 				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
 				FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */,

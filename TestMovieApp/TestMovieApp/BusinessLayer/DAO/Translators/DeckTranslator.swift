@@ -9,7 +9,7 @@ import Foundation
 import SDAO
 import Monreau
 
-// MARK: - CardTranslator
+// MARK: - DeckTranslator
 
 public final class DeckTranslator {
     
@@ -20,10 +20,10 @@ public final class DeckTranslator {
     
     // MARK: - Property
     
-    /// CardInfo storage
-    private lazy var cardInfoStorage = RealmStorage<DeckModelObject>(configuration: self.configuration)
+    /// Deck storage
+    private lazy var deckStorage = RealmStorage<DeckModelObject>(configuration: self.configuration)
     
-    /// RealConfiguration instance
+    /// RealmConfiguration instance
     private let configuration: RealmConfiguration
     
     // MARK: - Initializers
@@ -41,12 +41,13 @@ extension DeckTranslator: Translator {
         DeckPlainObject(
             id: model.id,
             title: model.title,
-            count: model.count
+            count: model.count,
+            cards: model.cards
         )
     }
     
     public func translate(plain: PlainModel) throws -> DatabaseModel {
-        let model = try cardInfoStorage.read(byPrimaryKey: plain.uniqueId.rawValue) ?? DatabaseModel()
+        let model = try deckStorage.read(byPrimaryKey: plain.uniqueId.rawValue) ?? DatabaseModel()
         try translate(from: plain, to: model)
         return model
     }
