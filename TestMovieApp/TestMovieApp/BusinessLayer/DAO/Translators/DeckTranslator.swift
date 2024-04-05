@@ -1,27 +1,27 @@
 //
-//  CardInfoTranslator.swift
+//  DeckTranslator.swift
 //  TestMovieApp
 //
-//  Created by Andrey Barsukov on 29.03.2024.
+//  Created by Andrey Barsukov on 05.04.2024.
 //
 
 import Foundation
 import SDAO
 import Monreau
 
-// MARK: - CardInfoTranslator
+// MARK: - CardTranslator
 
-public final class CardInfoTranslator {
+public final class DeckTranslator {
     
     // MARK: - Aliases
     
-    public typealias PlainModel = CardInfoPlainObject
-    public typealias DatabaseModel = CardInfoModelObject
+    public typealias PlainModel = DeckPlainObject
+    public typealias DatabaseModel = DeckModelObject
     
     // MARK: - Property
     
     /// CardInfo storage
-    private lazy var cardInfoStorage = RealmStorage<CardInfoModelObject>(configuration: self.configuration)
+    private lazy var cardInfoStorage = RealmStorage<DeckModelObject>(configuration: self.configuration)
     
     /// RealConfiguration instance
     private let configuration: RealmConfiguration
@@ -35,13 +35,13 @@ public final class CardInfoTranslator {
 
 // MARK: - Translator
 
-extension CardInfoTranslator: Translator {
+extension DeckTranslator: Translator {
     
     public func translate(model: DatabaseModel) throws -> PlainModel {
-        CardInfoPlainObject (
+        DeckPlainObject(
             id: model.id,
-            frontTitle: model.frontTitle,
-            backTitle: model.backTitle
+            title: model.title,
+            count: model.count
         )
     }
     
@@ -56,7 +56,7 @@ extension CardInfoTranslator: Translator {
             databaseModel.uniqueId = plain.uniqueId.rawValue
         }
         databaseModel.id = plain.id
-        databaseModel.frontTitle = plain.frontTitle
-        databaseModel.backTitle = plain.backTitle
+        databaseModel.title = plain.title
+        databaseModel.count = plain.count
     }
 }

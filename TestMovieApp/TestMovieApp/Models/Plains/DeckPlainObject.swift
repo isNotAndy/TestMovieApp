@@ -1,5 +1,5 @@
 //
-//  DeskInfoPlainObject.swift
+//  DeckPlainObject.swift
 //  TestMovieApp
 //
 //  Created by Andrey Barsukov on 30.03.2024.
@@ -8,10 +8,10 @@
 import SDAO
 import Foundation
 
-// MARK: - DeskInfoPlainObject
+// MARK: - DeckPlainObject
 
 /// @realm
-public struct DeskInfoPlainObject: Codable, Equatable, Identifiable, Plain {
+public struct DeckPlainObject: Codable, Equatable, Identifiable, Plain {
     
     // MARK: - Properties
     
@@ -19,10 +19,10 @@ public struct DeskInfoPlainObject: Codable, Equatable, Identifiable, Plain {
         UniqueID(rawValue: id)
     }
     
-    /// ID of desk
+    /// ID of deck
     public let id: String
 
-    /// Title of desk
+    /// Title of deck
     public let title: String
     
     /// Count of card

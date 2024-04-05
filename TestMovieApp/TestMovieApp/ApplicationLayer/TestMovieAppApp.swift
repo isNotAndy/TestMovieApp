@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct TestMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            DeskListView(store: Store(initialState: DeskListState(), reducer: DeskListReducer()))
+            EmptyView()
         }
     }
 }
