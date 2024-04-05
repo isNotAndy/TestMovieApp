@@ -1,5 +1,5 @@
 //
-//  CardInfoModelObject.swift
+//  CardModelObject.swift
 //  TestMovieApp
 //
 //  Created by Andrey Barsukov on 29.03.2024.
@@ -9,9 +9,9 @@ import Foundation
 import SDAO
 import RealmSwift
 
-// MARK: - CardInfoModelObject
+// MARK: - CardModelObject
 
-public final class CardInfoModelObject: RealmModel {
+public final class CardModelObject: RealmModel {
     
     // MARK: - Properties
     
@@ -23,4 +23,7 @@ public final class CardInfoModelObject: RealmModel {
 
     /// Description of card
     @objc dynamic public var backTitle = ""
+    
+    /// Сard difficulty rating
+    @objc dynamic public var status = ""
 }

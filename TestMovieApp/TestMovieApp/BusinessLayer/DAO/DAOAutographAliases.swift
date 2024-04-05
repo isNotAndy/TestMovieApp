@@ -11,4 +11,7 @@ import Monreau
 // MARK: - Aliases
 
 /// DAO alias for  ProjectPlainObject entity
-public typealias CardInfoDAO = DAO<RealmStorage<CardInfoModelObject>, CardInfoTranslator>
+public typealias CardDAO = DAO<RealmStorage<CardModelObject>, CardTranslator>
+
+/// DAO alias for  ProjectPlainObject entity
+public typealias DeckDAO = DAO<RealmStorage<DeckModelObject>, DeckTranslator>

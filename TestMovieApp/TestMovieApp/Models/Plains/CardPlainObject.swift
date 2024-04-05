@@ -1,5 +1,5 @@
 //
-//  CardInfoPlainObject.swift
+//  CardPlainObject.swift
 //  TestMovieApp
 //
 //  Created by Andrey Barsukov on 29.03.2024.
@@ -8,10 +8,10 @@
 import SDAO
 import Foundation
 
-// MARK: - CardInfoPlainObject
+// MARK: - CardPlainObject
 
 /// @realm
-public struct CardInfoPlainObject: Codable, Equatable, Identifiable, Plain {
+public struct CardPlainObject: Codable, Equatable, Identifiable, Plain {
     
     // MARK: - Properties
     
@@ -27,5 +27,8 @@ public struct CardInfoPlainObject: Codable, Equatable, Identifiable, Plain {
 
     /// Description of card
     public let backTitle: String
+    
+    /// Сard difficulty rating
+    public var status: String?
 }
 
