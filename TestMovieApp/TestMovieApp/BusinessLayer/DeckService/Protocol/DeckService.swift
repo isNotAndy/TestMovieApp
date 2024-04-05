@@ -18,9 +18,28 @@ public typealias DeckServiceError = NSError
 public enum DeckServiceAction: Equatable {
     
     // MARK: - Cases
+    
+    /// Retrieves card cache.
+    case getDeckCashe([DeckPlainObject]?)
 }
 
-// MARK: - CardService
+// MARK: - DeckService
 
 public protocol DeckService {
+    
+    /// Function to add a deck.
+    /// - Returns: A service call for adding a deck.
+    func addDeck(with title: String, and id: String) -> ServiceCall<DeckPlainObject>
+    
+    /// Function to remove a deck.
+    /// - Parameter id: The ID of the card to remove.
+    func removeDeck(with id: DeckPlainObject.ID)
+    
+    /// Function to edit a decks.
+    /// - Parameter id: The ID of the card to edit.
+    func editDeck(with id: DeckPlainObject.ID)
+    
+    /// Function to read decks.
+    /// - Returns: A service call for reading decks.
+    func readDecks() -> ServiceCall<[DeckPlainObject]?>
 }

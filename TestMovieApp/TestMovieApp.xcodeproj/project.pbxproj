@@ -95,8 +95,8 @@
 		FB2460FF2BBEA77A00C17D19 /* CardService */ = {
 			isa = PBXGroup;
 			children = (
-				FB2461012BBEA81600C17D19 /* Protocol */,
 				FB2461002BBEA80F00C17D19 /* Concrete */,
+				FB2461012BBEA81600C17D19 /* Protocol */,
 			);
 			path = CardService;
 			sourceTree = "<group>";

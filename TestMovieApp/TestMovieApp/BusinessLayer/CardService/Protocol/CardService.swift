@@ -18,10 +18,28 @@ public typealias CardServiceError = NSError
 public enum CardServiceAction: Equatable {
     
     // MARK: - Cases
-    case cardInfoCacheObtained([CardPlainObject]?)
+    
+    /// Retrieves card cache.
+    case getCardCashe([CardPlainObject]?)
 }
 
 // MARK: - CardService
 
 public protocol CardService {
+    
+    /// Function to add a card.
+    /// - Returns: A service call for adding a card.
+    func addCardWith(id: String, frontTitle: String, backTitle: String, status: String?) -> ServiceCall<CardPlainObject>
+    
+    /// Function to remove a card.
+    /// - Parameter id: The ID of the card to remove.
+    func removeCard(with id: CardPlainObject.ID)
+    
+    /// Function to edit a card.
+    /// - Parameter id: The ID of the card to edit.
+    func editCard(with id: CardPlainObject.ID)
+    
+    /// Function to read cards.
+    /// - Returns: A service call for reading cards.
+    func readCards() -> ServiceCall<[CardPlainObject]?>
 }
