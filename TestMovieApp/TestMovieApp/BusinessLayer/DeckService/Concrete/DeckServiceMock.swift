@@ -32,7 +32,7 @@ public final class DeckServiceMock: WebService {
 
 extension DeckServiceMock: DeckService {
     
-    public func addDeck(with title: String, and id: String , and cards: [CardPlainObject]) -> ServiceCall<DeckPlainObject> {
+    public func addDeckWith(title: String, id: String , cards: [CardPlainObject]) -> ServiceCall<DeckPlainObject> {
         createCall {
             let result = DeckPlainObject(id: id, title: title, count: 0, cards: cards)
             try! self.dao.persist(result)

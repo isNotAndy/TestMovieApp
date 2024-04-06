@@ -40,6 +40,17 @@
 		FBAC7A982BBFF381007BD0CF /* SeviecesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A972BBFF381007BD0CF /* SeviecesAssembly.swift */; };
 		FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A992BBFF63E007BD0CF /* TranslatorsAssembly.swift */; };
 		FBAC7A9C2BBFF685007BD0CF /* InfrastructureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7A9B2BBFF685007BD0CF /* InfrastructureAssembly.swift */; };
+		FBAC7AA22BC01247007BD0CF /* DeckListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AA12BC01247007BD0CF /* DeckListState.swift */; };
+		FBAC7AA42BC01253007BD0CF /* DeckListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AA32BC01253007BD0CF /* DeckListAction.swift */; };
+		FBAC7AA62BC01261007BD0CF /* DeckListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AA52BC01261007BD0CF /* DeckListReducer.swift */; };
+		FBAC7AA92BC0133D007BD0CF /* DeckListItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AA82BC0133D007BD0CF /* DeckListItemState.swift */; };
+		FBAC7AAB2BC0134E007BD0CF /* DeckListItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AAA2BC0134E007BD0CF /* DeckListItemAction.swift */; };
+		FBAC7AAD2BC01372007BD0CF /* DeckListItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AAC2BC01372007BD0CF /* DeckListItemReducer.swift */; };
+		FBAC7AAF2BC025E5007BD0CF /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AAE2BC025E5007BD0CF /* DeckListView.swift */; };
+		FBAC7AB42BC03577007BD0CF /* DeckItemBuilderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB32BC03577007BD0CF /* DeckItemBuilderState.swift */; };
+		FBAC7AB62BC03581007BD0CF /* DeckItemBuilderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB52BC03581007BD0CF /* DeckItemBuilderAction.swift */; };
+		FBAC7AB82BC0359A007BD0CF /* DeckItemBuilderReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB72BC0359A007BD0CF /* DeckItemBuilderReducer.swift */; };
+		FBAC7ABA2BC035A3007BD0CF /* DeckItemBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */; };
 		FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +82,17 @@
 		FBAC7A972BBFF381007BD0CF /* SeviecesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeviecesAssembly.swift; sourceTree = "<group>"; };
 		FBAC7A992BBFF63E007BD0CF /* TranslatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorsAssembly.swift; sourceTree = "<group>"; };
 		FBAC7A9B2BBFF685007BD0CF /* InfrastructureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureAssembly.swift; sourceTree = "<group>"; };
+		FBAC7AA12BC01247007BD0CF /* DeckListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListState.swift; sourceTree = "<group>"; };
+		FBAC7AA32BC01253007BD0CF /* DeckListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListAction.swift; sourceTree = "<group>"; };
+		FBAC7AA52BC01261007BD0CF /* DeckListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListReducer.swift; sourceTree = "<group>"; };
+		FBAC7AA82BC0133D007BD0CF /* DeckListItemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItemState.swift; sourceTree = "<group>"; };
+		FBAC7AAA2BC0134E007BD0CF /* DeckListItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItemAction.swift; sourceTree = "<group>"; };
+		FBAC7AAC2BC01372007BD0CF /* DeckListItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItemReducer.swift; sourceTree = "<group>"; };
+		FBAC7AAE2BC025E5007BD0CF /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
+		FBAC7AB32BC03577007BD0CF /* DeckItemBuilderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderState.swift; sourceTree = "<group>"; };
+		FBAC7AB52BC03581007BD0CF /* DeckItemBuilderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderAction.swift; sourceTree = "<group>"; };
+		FBAC7AB72BC0359A007BD0CF /* DeckItemBuilderReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderReducer.swift; sourceTree = "<group>"; };
+		FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderView.swift; sourceTree = "<group>"; };
 		FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +215,7 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC7AA02BC01234007BD0CF /* DeckList */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -350,6 +373,40 @@
 			path = Assemblies;
 			sourceTree = "<group>";
 		};
+		FBAC7AA02BC01234007BD0CF /* DeckList */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7AA12BC01247007BD0CF /* DeckListState.swift */,
+				FBAC7AA32BC01253007BD0CF /* DeckListAction.swift */,
+				FBAC7AA52BC01261007BD0CF /* DeckListReducer.swift */,
+				FBAC7AAE2BC025E5007BD0CF /* DeckListView.swift */,
+				FBAC7AA72BC0130B007BD0CF /* DeckListItem */,
+				FBAC7AB12BC03543007BD0CF /* DeckItemBuilder */,
+			);
+			path = DeckList;
+			sourceTree = "<group>";
+		};
+		FBAC7AA72BC0130B007BD0CF /* DeckListItem */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7AA82BC0133D007BD0CF /* DeckListItemState.swift */,
+				FBAC7AAA2BC0134E007BD0CF /* DeckListItemAction.swift */,
+				FBAC7AAC2BC01372007BD0CF /* DeckListItemReducer.swift */,
+			);
+			path = DeckListItem;
+			sourceTree = "<group>";
+		};
+		FBAC7AB12BC03543007BD0CF /* DeckItemBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7AB32BC03577007BD0CF /* DeckItemBuilderState.swift */,
+				FBAC7AB52BC03581007BD0CF /* DeckItemBuilderAction.swift */,
+				FBAC7AB72BC0359A007BD0CF /* DeckItemBuilderReducer.swift */,
+				FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */,
+			);
+			path = DeckItemBuilder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,8 +494,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBAC7AA42BC01253007BD0CF /* DeckListAction.swift in Sources */,
 				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
 				FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */,
+				FBAC7AAB2BC0134E007BD0CF /* DeckListItemAction.swift in Sources */,
+				FBAC7AB82BC0359A007BD0CF /* DeckItemBuilderReducer.swift in Sources */,
 				FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */,
 				FB7AEF6D2BB6B46200CF2801 /* CardModelObject.swift in Sources */,
 				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
@@ -449,16 +509,24 @@
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
 				FB2461032BBEA84300C17D19 /* CardService.swift in Sources */,
 				FBAC7A962BBFF181007BD0CF /* DAOAssembly.swift in Sources */,
+				FBAC7AA62BC01261007BD0CF /* DeckListReducer.swift in Sources */,
+				FBAC7AAD2BC01372007BD0CF /* DeckListItemReducer.swift in Sources */,
 				FBAC7A982BBFF381007BD0CF /* SeviecesAssembly.swift in Sources */,
+				FBAC7AB62BC03581007BD0CF /* DeckItemBuilderAction.swift in Sources */,
 				FB24610F2BBFE2D000C17D19 /* DeckModelObject.swift in Sources */,
+				FBAC7ABA2BC035A3007BD0CF /* DeckItemBuilderView.swift in Sources */,
+				FBAC7AA22BC01247007BD0CF /* DeckListState.swift in Sources */,
 				FB6E76312BB1BA2500D5C117 /* View.swift in Sources */,
 				FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */,
 				FB2461132BBFE9BD00C17D19 /* DeckService.swift in Sources */,
+				FBAC7AA92BC0133D007BD0CF /* DeckListItemState.swift in Sources */,
 				FBAC7A9C2BBFF685007BD0CF /* InfrastructureAssembly.swift in Sources */,
 				FB6E76512BB6A97200D5C117 /* AssembliesCollector.swift in Sources */,
 				FB2461152BBFE9E800C17D19 /* DeckServiceMock.swift in Sources */,
 				FB6E763D2BB1BCDB00D5C117 /* DAOAutographAliases.swift in Sources */,
+				FBAC7AAF2BC025E5007BD0CF /* DeckListView.swift in Sources */,
 				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
+				FBAC7AB42BC03577007BD0CF /* DeckItemBuilderState.swift in Sources */,
 				FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */,
 				FB2461112BBFE4FB00C17D19 /* DeckTranslator.swift in Sources */,
 				FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */,

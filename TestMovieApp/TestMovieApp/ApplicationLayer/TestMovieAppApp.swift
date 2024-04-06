@@ -12,7 +12,12 @@ import ComposableArchitecture
 struct TestMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            DeckListView(
+                store: Store(
+                    initialState: DeckListState(defaultCount: 10),
+                    reducer: DeckListReducer()
+                )
+            )
         }
     }
 }
