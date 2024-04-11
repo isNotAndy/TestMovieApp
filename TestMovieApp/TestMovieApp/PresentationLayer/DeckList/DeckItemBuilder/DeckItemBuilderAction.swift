@@ -15,7 +15,10 @@ public enum DeckItemBuilderAction: Equatable, BindableAction {
     // MARK: - Cases
     
     /// An action that calls when some item tapped
-    case buttonTapped(String, String)
+    case buttonPressed(String)
+    
+    /// Responce of the `DeckService` generation method
+    case deckService(Result<DeckServiceAction, NSError>)
     
     // MARK: - Binding
     

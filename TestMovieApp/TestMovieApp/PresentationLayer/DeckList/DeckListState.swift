@@ -15,6 +15,9 @@ public struct DeckListState: Equatable {
     
     // MARK: - Properties
     
+    /// Title of element in `items`
+    public var title: String = ""
+    
     // MARK: - Children
     
     /// An array of items representing the data to be displayed in the interactive list.
@@ -29,12 +32,17 @@ public struct DeckListState: Equatable {
     /// We use it here to be able to integrate `DeckItemBuilder` feature into a current module logic.
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `counter` module all changes will be saved here.
-    @PresentationState public var deckItemBuilder: DeckItemBuilderState?
+    @PresentationState public var deckItemBuilder: DeckItemBuilderState!
     
     // MARK: - Relodable
     
     /// ReloadableState instace for network operations
-    public var reloadableNumbersInfo: IDReloadableState<[DeckPlainObject], Int, DeckServiceError>
+    public var reloadableDeckInfo: IDReloadableState<[DeckPlainObject], Int, DeckServiceError>
+    
+    // MARK: - Pagination
+    
+    /// Pagination state instance
+    public var pagination: PaginationState<DeckPlainObject>
 }
 
 // MARK: - Initializers
@@ -42,6 +50,7 @@ public struct DeckListState: Equatable {
 extension DeckListState {
     
     public init(defaultCount: Int) {
-        reloadableNumbersInfo = IDReloadableState(id: defaultCount)
+        reloadableDeckInfo = IDReloadableState(id: defaultCount)
+        pagination = PaginationState(pageSize: AppConstants.Pagination.pageSize)
     }
 }

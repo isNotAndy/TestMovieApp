@@ -11,20 +11,34 @@ import SwiftUI
 // MARK: - DeckListView
 
 public struct DeckListView: View {
-
+    
     // MARK: - Properties
-
+    
     /// The store powering the `DeckList` reducer
     public let store: StoreOf<DeckListReducer>
-
+    
     // MARK: - View
-
+    
     public var body: some View {
         WithViewStore(store) { viewStore in
-            NavigationView {
-                Section {
-                    Button("Add Deck") {
-                        viewStore.send(.actionSheetButtonTapped)
+            ScrollView {
+                LazyVStack {
+                    Section {
+                        Button("Add Deck") {
+                            viewStore.send(.actionSheetButtonTapped)
+                        }
+                        ForEachStore(
+                            store.scope(
+                                state: \.items,
+                                action: DeckListAction.item
+                            ),
+                            content: DeckListItemView.init
+                        )
+                        TMAPaginationView(
+                            store: store.scope(
+                                state: \.pagination,
+                                action: DeckListAction.pagination)
+                        )
                     }
                 }
             }

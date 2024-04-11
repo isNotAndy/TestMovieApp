@@ -32,10 +32,28 @@ public final class DeckServiceMock: WebService {
 
 extension DeckServiceMock: DeckService {
     
-    public func addDeckWith(title: String, id: String , cards: [CardPlainObject]) -> ServiceCall<DeckPlainObject> {
+    public func readDeckInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<DeckPlainObject>> {
         createCall {
-            let result = DeckPlainObject(id: id, title: title, count: 0, cards: cards)
+            let pageData: [DeckPlainObject] = try! self.dao.read()
+            let paginationMetadata = PaginationMetadataPlainObject(
+                totalObjectCount: pageData.count,
+                pageCount: (pageData.count + pageSize - 1) / pageSize,
+                currentPage: page,
+                perPage: pageSize
+            )
+            return .success(PaginatedResponsePlainObject(
+                pagination: paginationMetadata,
+                array: pageData
+            ))
+        }
+    }
+    
+    public func addDeckWith(title: String, id: DeckPlainObject.ID) -> ServiceCall<DeckPlainObject> {
+        createCall {
+            let result = DeckPlainObject(id: id, title: title, count: 0)
             try! self.dao.persist(result)
+            print(result)
+            print(try! self.dao.read())
             return .success(result)
         }
     }
@@ -44,14 +62,14 @@ extension DeckServiceMock: DeckService {
         try! self.dao.erase(byPrimaryKey: UniqueID(rawValue: id))
     }
     
-    public func editDeck(with id: DeckPlainObject.ID) {
-        try! self.dao.read(byPrimaryKey: id)
-    }
-    
     public func readDecks() -> ServiceCall<[DeckPlainObject]?> {
         createCall {
-            let cards = try! self.dao.read()
-            return .success(cards)
+            do {
+                let result = try self.dao.read()
+                return .success(result)
+            } catch {
+                return .failure(error)
+            }
         }
     }
 }

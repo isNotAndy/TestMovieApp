@@ -23,11 +23,14 @@ struct DeckItemBuilderView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
-                TextField("Enter deck name", text: viewStore.$name)
+                HStack {
+                    TextField("Enter deck name", text: viewStore.$name)
+                        .padding()
+                    Button("Add Deck") {
+                        viewStore.send(.buttonPressed((viewStore.name)))
+                    }
                     .padding()
-                Button("Add Deck") {
                 }
-                .padding()
             }
             .padding()
             .background(Color.white)

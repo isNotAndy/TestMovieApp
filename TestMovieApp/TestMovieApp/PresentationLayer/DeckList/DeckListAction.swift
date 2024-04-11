@@ -36,7 +36,16 @@ public enum DeckListAction: Equatable {
     /// `DeckItem` tapped
     case itemTepped
     
+    // MARK: - Reloadable
+    
+    case reloadableDeck(ReloadableAction<[DeckPlainObject], DeckServiceError>)
+    
     // MARK: - Children
+    
+    /// An action that triggers a specific action on a single item in the list.
+    /// The `id` parameter specifies the unique identifier of the item,
+    /// and the `action` parameter represents the specific action to be performed on the item.
+    case item(id: DeckListItemState.ID, action: DeckListItemAction)
     
     /// Child action for `DeckItemBuilder` module.
     ///
@@ -44,4 +53,8 @@ public enum DeckListAction: Equatable {
     /// In short, the `DeckItemBuilder` case means that every action in `DeckItemBuilder` module
     /// will be sent to current module through it
     case deckItemBuilder(PresentationAction<DeckItemBuilderAction>)
+    
+    // MARK: - Pagination
+    
+    case pagination(PaginationAction<DeckPlainObject, DeckServiceError>)
 }

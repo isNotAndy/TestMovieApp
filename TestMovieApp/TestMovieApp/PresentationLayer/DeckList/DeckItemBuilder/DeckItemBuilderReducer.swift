@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import Foundation
 
 // MARK: - DeckItemBuilderReducer
 
@@ -18,10 +19,17 @@ public struct DeckItemBuilderReducer: Reducer {
     // MARK: - Reducer
     
     public var body: some Reducer<DeckItemBuilderState, DeckItemBuilderAction> {
+        BindingReducer()
         Reduce { state, action in
             switch action {
-            case .buttonTapped(let title, let id):
-                let result = deckService.addDeckWith(title: title, id: id, cards: [CardPlainObject]())
+            case .buttonPressed(var name):
+                let id = UUID().uuidString
+                name = state.name
+                return deckService
+                    .addDeckWith(title: name, id: id)
+                    .publish()
+                    .map(DeckServiceAction.sendDeckCashe)
+                    .catchToEffect(DeckItemBuilderAction.deckService)
             default:
                 break
             }

@@ -51,6 +51,8 @@
 		FBAC7AB62BC03581007BD0CF /* DeckItemBuilderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB52BC03581007BD0CF /* DeckItemBuilderAction.swift */; };
 		FBAC7AB82BC0359A007BD0CF /* DeckItemBuilderReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB72BC0359A007BD0CF /* DeckItemBuilderReducer.swift */; };
 		FBAC7ABA2BC035A3007BD0CF /* DeckItemBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */; };
+		FBAC7ABC2BC32763007BD0CF /* DeckListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ABB2BC32763007BD0CF /* DeckListItemView.swift */; };
+		FBAC7ABF2BC682C3007BD0CF /* TMAPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ABE2BC682C3007BD0CF /* TMAPaginationView.swift */; };
 		FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		FBAC7AB52BC03581007BD0CF /* DeckItemBuilderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderAction.swift; sourceTree = "<group>"; };
 		FBAC7AB72BC0359A007BD0CF /* DeckItemBuilderReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderReducer.swift; sourceTree = "<group>"; };
 		FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderView.swift; sourceTree = "<group>"; };
+		FBAC7ABB2BC32763007BD0CF /* DeckListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItemView.swift; sourceTree = "<group>"; };
+		FBAC7ABE2BC682C3007BD0CF /* TMAPaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMAPaginationView.swift; sourceTree = "<group>"; };
 		FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +219,7 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC7ABD2BC68284007BD0CF /* DesighSystem */,
 				FBAC7AA02BC01234007BD0CF /* DeckList */,
 			);
 			path = PresentationLayer;
@@ -392,6 +397,7 @@
 				FBAC7AA82BC0133D007BD0CF /* DeckListItemState.swift */,
 				FBAC7AAA2BC0134E007BD0CF /* DeckListItemAction.swift */,
 				FBAC7AAC2BC01372007BD0CF /* DeckListItemReducer.swift */,
+				FBAC7ABB2BC32763007BD0CF /* DeckListItemView.swift */,
 			);
 			path = DeckListItem;
 			sourceTree = "<group>";
@@ -405,6 +411,14 @@
 				FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */,
 			);
 			path = DeckItemBuilder;
+			sourceTree = "<group>";
+		};
+		FBAC7ABD2BC68284007BD0CF /* DesighSystem */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7ABE2BC682C3007BD0CF /* TMAPaginationView.swift */,
+			);
+			path = DesighSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +521,7 @@
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
 				FB7AEF672BB6B12800CF2801 /* CardTranslator.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
+				FBAC7ABF2BC682C3007BD0CF /* TMAPaginationView.swift in Sources */,
 				FB2461032BBEA84300C17D19 /* CardService.swift in Sources */,
 				FBAC7A962BBFF181007BD0CF /* DAOAssembly.swift in Sources */,
 				FBAC7AA62BC01261007BD0CF /* DeckListReducer.swift in Sources */,
@@ -529,6 +544,7 @@
 				FBAC7AB42BC03577007BD0CF /* DeckItemBuilderState.swift in Sources */,
 				FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */,
 				FB2461112BBFE4FB00C17D19 /* DeckTranslator.swift in Sources */,
+				FBAC7ABC2BC32763007BD0CF /* DeckListItemView.swift in Sources */,
 				FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

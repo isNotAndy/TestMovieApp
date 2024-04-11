@@ -10,6 +10,13 @@ import ComposableArchitecture
 
 @main
 struct TestMovieAppApp: App {
+    
+    // MARK: - Initializers
+    
+    init() {
+        TestMovieAppAssembliesCollector.collect()
+    }
+    
     var body: some Scene {
         WindowGroup {
             DeckListView(
