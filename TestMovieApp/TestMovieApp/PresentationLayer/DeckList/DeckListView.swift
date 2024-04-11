@@ -21,8 +21,8 @@ public struct DeckListView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            ScrollView {
-                LazyVStack {
+            NavigationView {
+                List {
                     Section {
                         Button("Add Deck") {
                             viewStore.send(.actionSheetButtonTapped)
@@ -32,7 +32,17 @@ public struct DeckListView: View {
                                 state: \.items,
                                 action: DeckListAction.item
                             ),
-                            content: DeckListItemView.init
+                            content: { itemStore in
+                                NavigationLink(
+                                    destination: CardListView(
+                                        store: Store(
+                                            initialState: CardListState(defaultCount: 0),
+                                            reducer: CardListReducer())),
+                                    label: {
+                                        DeckListItemView(store: itemStore)
+                                    }
+                                )
+                            }
                         )
                         TMAPaginationView(
                             store: store.scope(
@@ -54,3 +64,4 @@ public struct DeckListView: View {
         }
     }
 }
+

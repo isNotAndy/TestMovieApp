@@ -1,26 +1,26 @@
 //
-//  DeckListAction.swift
+//  CardListAction.swift
 //  TestMovieApp
 //
-//  Created by Andrey Barsukov on 05.04.2024.
+//  Created by Andrey Barsukov on 11.04.2024.
 //
 
 import Foundation
 import TCANetworkReducers
 import ComposableArchitecture
 
-// MARK: - DeckListAction
+// MARK: - CardListAction
 
-/// All available `DeckList` module actions.
+/// All available `CardList` module actions.
 ///
-/// It's a type that represents all of the actions that can happen in `DeckList` reducer,
+/// It's a type that represents all of the actions that can happen in `CardList` reducer,
 /// such as user actions, notifications, event sources and more.
 ///
 /// We have some actions in the reducer. There are the obvious actions,
 /// such as tapping some button, holding another button, or changing a slider value.
 /// But there are also some slightly non-obvious ones, such as the action of the user dismissing the alert,
 /// and the action that occurs when we receive a response from the fact API request.
-public enum DeckListAction: Equatable {
+public enum CardListAction: Equatable {
     
     // MARK: - Cases
     
@@ -33,35 +33,28 @@ public enum DeckListAction: Equatable {
     /// An action that calls when user taps on the `dismiss` button on the sheet
     case actionSheetDismissed
     
-    /// `DeckListItem` tapped
+    /// `CardListItem` tapped
     case itemTepped
     
     // MARK: - Reloadable
     
-    case reloadableDeck(ReloadableAction<[DeckPlainObject], DeckServiceError>)
+    case reloadableDeck(ReloadableAction<[CardPlainObject], CardServiceError>)
     
     // MARK: - Children
     
     /// An action that triggers a specific action on a single item in the list.
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
-    case item(id: DeckListItemState.ID, action: DeckListItemAction)
+    case item(id: CardListItemState.ID, action: CardListItemAction)
     
-    /// Child action for `DeckItemBuilder` module.
+    /// Child action for `CardItemBuilder` module.
     ///
     /// It's necessary as we use `Scope` reducer in current module's reducer.
-    /// In short, the `DeckItemBuilder` case means that every action in `DeckItemBuilder` module
+    /// In short, the `CardItemBuilder` case means that every action in `CardItemBuilder` module
     /// will be sent to current module through it
-    case deckItemBuilder(PresentationAction<DeckItemBuilderAction>)
-    
-    /// Child action for `CardList` module.
-    ///
-    /// It's necessary as we use `Scope` reducer in current module's reducer.
-    /// In short, the `cardList` case means that every action in `cardList` module
-    /// will be sent to current module through it
-    case cardList(PresentationAction<CardListAction>)
+    case cardItemBuilder(PresentationAction<CardItemBuilderAction>)
     
     // MARK: - Pagination
     
-    case pagination(PaginationAction<DeckPlainObject, DeckServiceError>)
+    case pagination(PaginationAction<CardPlainObject, CardServiceError>)
 }

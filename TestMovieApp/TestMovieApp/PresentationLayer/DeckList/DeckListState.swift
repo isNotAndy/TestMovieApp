@@ -22,7 +22,7 @@ public struct DeckListState: Equatable {
     
     /// An array of items representing the data to be displayed in the interactive list.
     ///
-    /// The `items` property is of type `IdentifiedArrayOf<CellState>`, where `CellState` is a type
+    /// The `items` property is of type `IdentifiedArrayOf<DeckListState>`, where `DeckListState` is a type
     /// describing the state of individual cells in the interactive list.
     public var items = IdentifiedArrayOf<DeckListItemState>()
     
@@ -33,6 +33,14 @@ public struct DeckListState: Equatable {
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `counter` module all changes will be saved here.
     @PresentationState public var deckItemBuilder: DeckItemBuilderState!
+    
+    /// `CardState` instance
+    ///
+    /// It's an instance of `cardList` submodule.
+    /// We use it here to be able to integrate `cardList` feature into a current module logic.
+    /// All necessary processing is placed inside current reducer. Also, if you change the state
+    /// inside the `counter` module all changes will be saved here.
+    @PresentationState public var cardList: CardListState?
     
     // MARK: - Relodable
     

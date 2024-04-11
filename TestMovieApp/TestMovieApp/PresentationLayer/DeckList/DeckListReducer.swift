@@ -46,10 +46,15 @@ public struct DeckListReducer: Reducer {
             case .actionSheetDismissed:
                 state.deckItemBuilder = nil
                 return .send(.pagination(.reset))
+            case .itemTepped:
+                state.cardList = CardListState(defaultCount: 0)
             default:
                 break
             }
             return .none
+        }
+        .ifLet(\.$cardList, action: /DeckListAction.cardList) {
+            CardListReducer()
         }
         .ifLet(\.$deckItemBuilder, action: /DeckListAction.deckItemBuilder) {
             DeckItemBuilderReducer()

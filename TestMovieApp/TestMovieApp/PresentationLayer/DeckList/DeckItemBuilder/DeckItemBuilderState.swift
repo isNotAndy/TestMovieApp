@@ -14,6 +14,6 @@ public struct DeckItemBuilderState: Equatable {
     
     // MARK: - Properties
     
-    /// Name of `DeckItem`
+    /// Name of `DeckListItem`
     @BindingState public var name = ""
 }

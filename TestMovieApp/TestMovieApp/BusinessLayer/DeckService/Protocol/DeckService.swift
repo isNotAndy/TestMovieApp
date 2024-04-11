@@ -32,7 +32,7 @@ public protocol DeckService {
     func addDeckWith(title: String, id: DeckPlainObject.ID) -> ServiceCall<DeckPlainObject>
     
     /// Function to remove a deck.
-    /// - Parameter id: The ID of the card to remove.
+    /// - Parameter id: The ID of the deck to remove.
     func removeDeck(with id: DeckPlainObject.ID)
     
     /// Function to read decks.

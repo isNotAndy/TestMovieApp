@@ -10,7 +10,7 @@ import SwiftUI
 
 // MARK: - DeckListItemView
 
-/// A visual representation of `Item` module.
+/// A visual representation of `DeckListItem` module.
 /// Here we define the view that displays the feature.
 /// It holds onto a `Store<DeckListItemState, DeckListItemAction>` so that it can observe
 /// all changes to the state and re-render, and we can send all user actions
@@ -19,7 +19,7 @@ public struct DeckListItemView: View {
     
     // MARK: - Properties
     
-    /// The store powering the `Cell` reducer
+    /// The store powering the `DeckListItem` reducer
     public let store: StoreOf<DeckListItemReducer>
     
     // MARK: - View

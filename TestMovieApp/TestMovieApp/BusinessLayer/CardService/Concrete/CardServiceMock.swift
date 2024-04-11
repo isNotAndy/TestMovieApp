@@ -32,9 +32,26 @@ public final class CardServiceMock: WebService {
 
 extension CardServiceMock: CardService {
     
+    public func readCardInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<CardPlainObject>> {
+        createCall {
+            let pageData: [CardPlainObject] = try! self.dao.read()
+            let paginationMetadata = PaginationMetadataPlainObject(
+                totalObjectCount: pageData.count,
+                pageCount: (pageData.count + pageSize - 1) / pageSize,
+                currentPage: page,
+                perPage: pageSize
+            )
+            return .success(PaginatedResponsePlainObject(
+                pagination: paginationMetadata,
+                array: pageData
+            ))
+        }
+    }
+    
+    
     public func addCardWith(id: String, frontTitle: String, backTitle: String, status: String?) -> ServiceCall<CardPlainObject> {
         createCall {
-            let result = CardPlainObject(id: id, frontTitle: frontTitle, backTitle: backTitle, status: status)
+            let result = CardPlainObject(id: id, frontTitle: frontTitle, backTitle: backTitle, status: nil)
             try! self.dao.persist(result)
             return .success(result)
         }
@@ -44,14 +61,14 @@ extension CardServiceMock: CardService {
         try! self.dao.erase(byPrimaryKey: UniqueID(rawValue: id))
     }
     
-    public func editCard(with id: CardPlainObject.ID) {
-        try! self.dao.read(byPrimaryKey: id)
-    }
-    
     public func readCards() -> ServiceCall<[CardPlainObject]?> {
         createCall {
-            let cards = try! self.dao.read()
-            return .success(cards)
+            do {
+                let result = try self.dao.read()
+                return .success(result)
+            } catch {
+                return .failure(error)
+            }
         }
     }
 }

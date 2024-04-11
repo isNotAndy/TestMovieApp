@@ -53,6 +53,18 @@
 		FBAC7ABA2BC035A3007BD0CF /* DeckItemBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */; };
 		FBAC7ABC2BC32763007BD0CF /* DeckListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ABB2BC32763007BD0CF /* DeckListItemView.swift */; };
 		FBAC7ABF2BC682C3007BD0CF /* TMAPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ABE2BC682C3007BD0CF /* TMAPaginationView.swift */; };
+		FBAC7AC42BC7D138007BD0CF /* CardListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AC32BC7D138007BD0CF /* CardListState.swift */; };
+		FBAC7AC62BC7D141007BD0CF /* CardListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AC52BC7D141007BD0CF /* CardListAction.swift */; };
+		FBAC7AC82BC7D14F007BD0CF /* CardListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AC72BC7D14F007BD0CF /* CardListReducer.swift */; };
+		FBAC7ACA2BC7D15A007BD0CF /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AC92BC7D15A007BD0CF /* CardListView.swift */; };
+		FBAC7ACC2BC7D17E007BD0CF /* CardItemListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ACB2BC7D17E007BD0CF /* CardItemListState.swift */; };
+		FBAC7ACE2BC7D184007BD0CF /* CardItemListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ACD2BC7D184007BD0CF /* CardItemListAction.swift */; };
+		FBAC7AD02BC7D18A007BD0CF /* CardItemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ACF2BC7D18A007BD0CF /* CardItemListReducer.swift */; };
+		FBAC7AD22BC7D191007BD0CF /* CardItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD12BC7D191007BD0CF /* CardItemListView.swift */; };
+		FBAC7AD42BC7D214007BD0CF /* CardItemBuilderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD32BC7D214007BD0CF /* CardItemBuilderState.swift */; };
+		FBAC7AD62BC7D21C007BD0CF /* CardItemBuilderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD52BC7D21C007BD0CF /* CardItemBuilderAction.swift */; };
+		FBAC7AD82BC7D224007BD0CF /* CardItemBuilderReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD72BC7D224007BD0CF /* CardItemBuilderReducer.swift */; };
+		FBAC7ADA2BC7D22D007BD0CF /* CardItemBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD92BC7D22D007BD0CF /* CardItemBuilderView.swift */; };
 		FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +109,18 @@
 		FBAC7AB92BC035A3007BD0CF /* DeckItemBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckItemBuilderView.swift; sourceTree = "<group>"; };
 		FBAC7ABB2BC32763007BD0CF /* DeckListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItemView.swift; sourceTree = "<group>"; };
 		FBAC7ABE2BC682C3007BD0CF /* TMAPaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMAPaginationView.swift; sourceTree = "<group>"; };
+		FBAC7AC32BC7D138007BD0CF /* CardListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListState.swift; sourceTree = "<group>"; };
+		FBAC7AC52BC7D141007BD0CF /* CardListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListAction.swift; sourceTree = "<group>"; };
+		FBAC7AC72BC7D14F007BD0CF /* CardListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListReducer.swift; sourceTree = "<group>"; };
+		FBAC7AC92BC7D15A007BD0CF /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		FBAC7ACB2BC7D17E007BD0CF /* CardItemListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemListState.swift; sourceTree = "<group>"; };
+		FBAC7ACD2BC7D184007BD0CF /* CardItemListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemListAction.swift; sourceTree = "<group>"; };
+		FBAC7ACF2BC7D18A007BD0CF /* CardItemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemListReducer.swift; sourceTree = "<group>"; };
+		FBAC7AD12BC7D191007BD0CF /* CardItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemListView.swift; sourceTree = "<group>"; };
+		FBAC7AD32BC7D214007BD0CF /* CardItemBuilderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderState.swift; sourceTree = "<group>"; };
+		FBAC7AD52BC7D21C007BD0CF /* CardItemBuilderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderAction.swift; sourceTree = "<group>"; };
+		FBAC7AD72BC7D224007BD0CF /* CardItemBuilderReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderReducer.swift; sourceTree = "<group>"; };
+		FBAC7AD92BC7D22D007BD0CF /* CardItemBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderView.swift; sourceTree = "<group>"; };
 		FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +243,7 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC7AC02BC7CF2D007BD0CF /* CardList */,
 				FBAC7ABD2BC68284007BD0CF /* DesighSystem */,
 				FBAC7AA02BC01234007BD0CF /* DeckList */,
 			);
@@ -421,6 +446,41 @@
 			path = DesighSystem;
 			sourceTree = "<group>";
 		};
+		FBAC7AC02BC7CF2D007BD0CF /* CardList */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7AC32BC7D138007BD0CF /* CardListState.swift */,
+				FBAC7AC52BC7D141007BD0CF /* CardListAction.swift */,
+				FBAC7AC72BC7D14F007BD0CF /* CardListReducer.swift */,
+				FBAC7AC92BC7D15A007BD0CF /* CardListView.swift */,
+				FBAC7AC12BC7CF3E007BD0CF /* CardItemList */,
+				FBAC7AC22BC7CF53007BD0CF /* CardItemBuilder */,
+			);
+			path = CardList;
+			sourceTree = "<group>";
+		};
+		FBAC7AC12BC7CF3E007BD0CF /* CardItemList */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7ACB2BC7D17E007BD0CF /* CardItemListState.swift */,
+				FBAC7ACD2BC7D184007BD0CF /* CardItemListAction.swift */,
+				FBAC7ACF2BC7D18A007BD0CF /* CardItemListReducer.swift */,
+				FBAC7AD12BC7D191007BD0CF /* CardItemListView.swift */,
+			);
+			path = CardItemList;
+			sourceTree = "<group>";
+		};
+		FBAC7AC22BC7CF53007BD0CF /* CardItemBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7AD32BC7D214007BD0CF /* CardItemBuilderState.swift */,
+				FBAC7AD52BC7D21C007BD0CF /* CardItemBuilderAction.swift */,
+				FBAC7AD72BC7D224007BD0CF /* CardItemBuilderReducer.swift */,
+				FBAC7AD92BC7D22D007BD0CF /* CardItemBuilderView.swift */,
+			);
+			path = CardItemBuilder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,15 +569,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBAC7AA42BC01253007BD0CF /* DeckListAction.swift in Sources */,
+				FBAC7AC42BC7D138007BD0CF /* CardListState.swift in Sources */,
+				FBAC7ACC2BC7D17E007BD0CF /* CardItemListState.swift in Sources */,
 				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
+				FBAC7AD62BC7D21C007BD0CF /* CardItemBuilderAction.swift in Sources */,
 				FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */,
 				FBAC7AAB2BC0134E007BD0CF /* DeckListItemAction.swift in Sources */,
 				FBAC7AB82BC0359A007BD0CF /* DeckItemBuilderReducer.swift in Sources */,
 				FB6E762F2BB1B96200D5C117 /* PinToEdgeModifier.swift in Sources */,
+				FBAC7AC82BC7D14F007BD0CF /* CardListReducer.swift in Sources */,
 				FB7AEF6D2BB6B46200CF2801 /* CardModelObject.swift in Sources */,
 				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
 				FBAC7A932BBFEE30007BD0CF /* AppConstants.swift in Sources */,
 				FB7AEF6A2BB6B1E200CF2801 /* CardPlainObject.swift in Sources */,
+				FBAC7AD02BC7D18A007BD0CF /* CardItemListReducer.swift in Sources */,
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
 				FB7AEF672BB6B12800CF2801 /* CardTranslator.swift in Sources */,
 				FB6E75F42BB199E500D5C117 /* TestMovieAppApp.swift in Sources */,
@@ -530,7 +595,10 @@
 				FBAC7AB62BC03581007BD0CF /* DeckItemBuilderAction.swift in Sources */,
 				FB24610F2BBFE2D000C17D19 /* DeckModelObject.swift in Sources */,
 				FBAC7ABA2BC035A3007BD0CF /* DeckItemBuilderView.swift in Sources */,
+				FBAC7AD42BC7D214007BD0CF /* CardItemBuilderState.swift in Sources */,
 				FBAC7AA22BC01247007BD0CF /* DeckListState.swift in Sources */,
+				FBAC7AD22BC7D191007BD0CF /* CardItemListView.swift in Sources */,
+				FBAC7ACE2BC7D184007BD0CF /* CardItemListAction.swift in Sources */,
 				FB6E76312BB1BA2500D5C117 /* View.swift in Sources */,
 				FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */,
 				FB2461132BBFE9BD00C17D19 /* DeckService.swift in Sources */,
@@ -542,10 +610,14 @@
 				FBAC7AAF2BC025E5007BD0CF /* DeckListView.swift in Sources */,
 				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
 				FBAC7AB42BC03577007BD0CF /* DeckItemBuilderState.swift in Sources */,
+				FBAC7AC62BC7D141007BD0CF /* CardListAction.swift in Sources */,
 				FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */,
+				FBAC7AD82BC7D224007BD0CF /* CardItemBuilderReducer.swift in Sources */,
 				FB2461112BBFE4FB00C17D19 /* DeckTranslator.swift in Sources */,
 				FBAC7ABC2BC32763007BD0CF /* DeckListItemView.swift in Sources */,
+				FBAC7ACA2BC7D15A007BD0CF /* CardListView.swift in Sources */,
 				FB6E765B2BB6AB4000D5C117 /* DispatchQueue.swift in Sources */,
+				FBAC7ADA2BC7D22D007BD0CF /* CardItemBuilderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
