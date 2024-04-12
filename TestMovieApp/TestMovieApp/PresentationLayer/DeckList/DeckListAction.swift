@@ -20,7 +20,7 @@ import ComposableArchitecture
 /// such as tapping some button, holding another button, or changing a slider value.
 /// But there are also some slightly non-obvious ones, such as the action of the user dismissing the alert,
 /// and the action that occurs when we receive a response from the fact API request.
-public enum DeckListAction: Equatable {
+public enum DeckListAction: Equatable, BindableAction {
     
     // MARK: - Cases
     
@@ -34,7 +34,7 @@ public enum DeckListAction: Equatable {
     case actionSheetDismissed
     
     /// `DeckListItem` tapped
-    case itemTepped
+    case itemTapped
     
     // MARK: - Reloadable
     
@@ -59,9 +59,13 @@ public enum DeckListAction: Equatable {
     /// It's necessary as we use `Scope` reducer in current module's reducer.
     /// In short, the `cardList` case means that every action in `cardList` module
     /// will be sent to current module through it
-    case cardList(PresentationAction<CardListAction>)
+    case cardList(CardListAction)
     
     // MARK: - Pagination
     
     case pagination(PaginationAction<DeckPlainObject, DeckServiceError>)
+    
+    // MARK: - Binding
+    
+    case binding(BindingAction<DeckListState>)
 }

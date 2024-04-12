@@ -27,40 +27,49 @@ public struct DeckListView: View {
                         Button("Add Deck") {
                             viewStore.send(.actionSheetButtonTapped)
                         }
-                        ForEachStore(
-                            store.scope(
-                                state: \.items,
-                                action: DeckListAction.item
-                            ),
-                            content: { itemStore in
-                                NavigationLink(
-                                    destination: CardListView(
-                                        store: Store(
-                                            initialState: CardListState(defaultCount: 0),
-                                            reducer: CardListReducer())),
-                                    label: {
-                                        DeckListItemView(store: itemStore)
-                                    }
-                                )
-                            }
-                        )
-                        TMAPaginationView(
-                            store: store.scope(
-                                state: \.pagination,
-                                action: DeckListAction.pagination)
-                        )
                     }
+                    TMAPaginationView(
+                        store: store.scope(
+                            state: \.pagination,
+                            action: DeckListAction.pagination
+                        )
+                    )
+                    ForEachStore(
+                        store.scope(
+                            state: \.items,
+                            action: DeckListAction.item
+                        ),
+                        content: DeckListItemView.init
+                    )
                 }
+                .background(
+                    NavigationLink(
+                        isActive: viewStore.$isCardListActive,
+                        destination: {
+                            IfLetStore(
+                                store.scope(
+                                    state: \.cardList,
+                                    action: DeckListAction.cardList
+                                ),
+                                then: CardListView.init
+                            )
+                        },
+                        label: {
+                            EmptyView()
+                        }
+                    )
+                )
+                .sheet(
+                    store: store.scope(
+                        state: \.$deckItemBuilder,
+                        action: DeckListAction.deckItemBuilder
+                    ), onDismiss: {
+                        viewStore.send(.actionSheetDismissed)
+                    },
+                    content: DeckItemBuilderView.init
+                )
             }
-            .sheet(
-                store: store.scope(
-                    state: \.$deckItemBuilder,
-                    action: DeckListAction.deckItemBuilder
-                ), onDismiss: {
-                    viewStore.send(.actionSheetDismissed)
-                },
-                content: DeckItemBuilderView.init
-            )
+            .navigationViewStyle(.stack)
         }
     }
 }

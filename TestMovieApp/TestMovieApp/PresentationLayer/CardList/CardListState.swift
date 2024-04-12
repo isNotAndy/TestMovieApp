@@ -18,6 +18,9 @@ public struct CardListState: Equatable {
     /// Title of element in `items`
     public var title: String = ""
     
+    /// ID of `DeckItem`
+    public let deckID: DeckPlainObject.ID
+    
     // MARK: - Children
     
     /// An array of items representing the data to be displayed in the interactive list.
@@ -42,15 +45,16 @@ public struct CardListState: Equatable {
     // MARK: - Pagination
     
     /// Pagination state instance
-    public var pagination: PaginationState<CardPlainObject>
+    public var pagination: IDPaginationState<CardPlainObject, DeckPlainObject.ID>
 }
 
 // MARK: - Initializers
 
 extension CardListState {
     
-    public init(defaultCount: Int) {
+    public init(defaultCount: Int, deckID: DeckPlainObject.ID) {
         reloadableDeckInfo = IDReloadableState(id: defaultCount)
-        pagination = PaginationState(pageSize: AppConstants.Pagination.pageSize)
+        pagination = IDPaginationState(id: deckID, pageSize: AppConstants.Pagination.pageSize)
+        self.deckID = deckID
     }
 }

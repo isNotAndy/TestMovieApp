@@ -35,10 +35,6 @@ public protocol DeckService {
     /// - Parameter id: The ID of the deck to remove.
     func removeDeck(with id: DeckPlainObject.ID)
     
-    /// Function to read decks.
-    /// - Returns: A service call for reading decks.
-    func readDecks() -> ServiceCall<[DeckPlainObject]?>
-    
     /// Function to perform pagination.
     /// - Parameters:
     ///   - pageNumber: The page number.

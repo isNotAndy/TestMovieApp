@@ -36,7 +36,7 @@ public struct CardListView: View {
                         )
                         TMAPaginationView(
                             store: store.scope(
-                                state: \.pagination,
+                                state: \.pagination.pagination,
                                 action: CardListAction.pagination)
                         )
                     }

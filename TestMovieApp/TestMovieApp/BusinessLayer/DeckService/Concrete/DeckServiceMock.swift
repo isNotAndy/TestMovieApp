@@ -52,24 +52,11 @@ extension DeckServiceMock: DeckService {
         createCall {
             let result = DeckPlainObject(id: id, title: title, count: 0)
             try! self.dao.persist(result)
-            print(result)
-            print(try! self.dao.read())
             return .success(result)
         }
     }
     
     public func removeDeck(with id: DeckPlainObject.ID) {
         try! self.dao.erase(byPrimaryKey: UniqueID(rawValue: id))
-    }
-    
-    public func readDecks() -> ServiceCall<[DeckPlainObject]?> {
-        createCall {
-            do {
-                let result = try self.dao.read()
-                return .success(result)
-            } catch {
-                return .failure(error)
-            }
-        }
     }
 }

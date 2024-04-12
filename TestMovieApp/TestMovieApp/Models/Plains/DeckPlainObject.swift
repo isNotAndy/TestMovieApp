@@ -27,7 +27,4 @@ public struct DeckPlainObject: Codable, Equatable, Identifiable, Plain {
     
     /// Count of card
     public var count: Int
-    
-    /// Array of `cards` in `deck`
-    public var cards: [CardPlainObject]?
 }

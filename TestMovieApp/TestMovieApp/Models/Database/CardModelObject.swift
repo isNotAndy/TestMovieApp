@@ -17,6 +17,9 @@ public final class CardModelObject: RealmModel {
     
     /// ID of card
     @objc dynamic public var id = ""
+    
+    /// ID of deck
+    @objc dynamic public var deckID = ""
 
     /// Title of card
     @objc dynamic public var frontTitle = ""

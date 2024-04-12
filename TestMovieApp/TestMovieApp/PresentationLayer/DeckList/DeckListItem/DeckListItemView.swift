@@ -26,14 +26,15 @@ public struct DeckListItemView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            HStack {
-                Text(viewStore.title)
-                Spacer(minLength: 4)
-            }
-            .frame(height: 40)
-            .onTapGesture {
+            Button(action: {
                 viewStore.send(.itemTapped)
-            }
+            }, label: {
+                HStack {
+                    Text(viewStore.title)
+                    Spacer(minLength: 4)
+                }
+            })
+            .frame(height: 40)
         }
     }
 }

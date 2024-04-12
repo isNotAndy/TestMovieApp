@@ -40,7 +40,7 @@ public struct DeckListState: Equatable {
     /// We use it here to be able to integrate `cardList` feature into a current module logic.
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `counter` module all changes will be saved here.
-    @PresentationState public var cardList: CardListState?
+    public var cardList: CardListState?
     
     // MARK: - Relodable
     
@@ -51,6 +51,11 @@ public struct DeckListState: Equatable {
     
     /// Pagination state instance
     public var pagination: PaginationState<DeckPlainObject>
+    
+    // MARK: - Binding
+    
+    /// `DeckList`
+    @BindingState public var isCardListActive = false 
 }
 
 // MARK: - Initializers

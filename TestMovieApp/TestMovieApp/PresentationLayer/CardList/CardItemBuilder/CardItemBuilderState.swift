@@ -19,4 +19,7 @@ public struct CardItemBuilderState: Equatable {
     
     /// BackName of `CardListItem`
     @BindingState public var backName = ""
+    
+    /// ID of deck
+    public let deckID: DeckPlainObject.ID
 }

@@ -25,9 +25,9 @@ public struct CardListReducer: Reducer {
             state: \.pagination,
             action: /CardListAction.pagination
         ) {
-            PaginationReducer { pageNumber, pageSize  in
+             IDPaginationReducer { id, pageNumber, pageSize  in
                 cardService
-                    .readCardInfo(page: pageNumber, pageSize: pageSize)
+                    .readCardInfo(page: pageNumber, pageSize: pageSize, deckID: id)
                     .publish()
                     .delay(for: 1.5, scheduler: DispatchQueue.main.eraseToAnyScheduler())
                     .eraseToAnyPublisher()
@@ -42,10 +42,12 @@ public struct CardListReducer: Reducer {
             case .reloadableDeck(.cacheResponse(.failure(_))):
                 return .none
             case .actionSheetButtonTapped:
-                state.cardItemBuilder = CardItemBuilderState()
+                state.cardItemBuilder = CardItemBuilderState(deckID: state.deckID)
             case .actionSheetDismissed:
                 state.cardItemBuilder = nil
                 return .send(.pagination(.reset))
+            case .cardItemBuilder(.presented(.buttonPressed)):
+                return .send(.actionSheetDismissed)
             default:
                 break
             }

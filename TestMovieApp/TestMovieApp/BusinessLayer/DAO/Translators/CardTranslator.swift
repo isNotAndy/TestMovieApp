@@ -40,6 +40,7 @@ extension CardTranslator: Translator {
     public func translate(model: DatabaseModel) throws -> PlainModel {
         CardPlainObject(
             id: model.id,
+            deckID: model.deckID,
             frontTitle: model.frontTitle,
             backTitle: model.backTitle
         )
@@ -58,5 +59,6 @@ extension CardTranslator: Translator {
         databaseModel.id = plain.id
         databaseModel.frontTitle = plain.frontTitle
         databaseModel.backTitle = plain.backTitle
+        databaseModel.deckID = plain.deckID
     }
 }

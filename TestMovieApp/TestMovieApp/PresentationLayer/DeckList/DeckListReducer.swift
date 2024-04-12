@@ -21,6 +21,7 @@ public struct DeckListReducer: Reducer {
     // MARK: - Reducer
     
     public var body: some Reducer<DeckListState, DeckListAction> {
+        BindingReducer()
         Scope(
             state: \.pagination,
             action: /DeckListAction.pagination
@@ -46,14 +47,24 @@ public struct DeckListReducer: Reducer {
             case .actionSheetDismissed:
                 state.deckItemBuilder = nil
                 return .send(.pagination(.reset))
-            case .itemTepped:
-                state.cardList = CardListState(defaultCount: 0)
+            case .item(id: let deckID, action: .itemTapped):
+                guard let item = state.items[id: deckID] else {
+                    return .none
+                }
+                state.isCardListActive = true
+                state.cardList = CardListState(defaultCount: 0, deckID: deckID)
+            case .binding(\.$isCardListActive):
+                if !state.isCardListActive {
+                    state.cardList = nil
+                }
+            case .deckItemBuilder(.presented(.buttonPressed)):
+                return .send(.actionSheetDismissed)
             default:
                 break
             }
             return .none
         }
-        .ifLet(\.$cardList, action: /DeckListAction.cardList) {
+        .ifLet(\.cardList, action: /DeckListAction.cardList) {
             CardListReducer()
         }
         .ifLet(\.$deckItemBuilder, action: /DeckListAction.deckItemBuilder) {

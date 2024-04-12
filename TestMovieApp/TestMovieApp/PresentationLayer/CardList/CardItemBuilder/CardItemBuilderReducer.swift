@@ -29,6 +29,7 @@ public struct CardItemBuilderReducer: Reducer {
                 return cardService
                     .addCardWith(
                         id: id,
+                        deckID: state.deckID,
                         frontTitle: frontName,
                         backTitle: backName,
                         status: nil

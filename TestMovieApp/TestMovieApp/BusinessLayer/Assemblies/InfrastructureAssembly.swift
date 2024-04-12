@@ -42,7 +42,7 @@ public final class InfrastructureAssembly: CollectableAssembly {
         container.register(RealmConfiguration.self) { resolver in
             RealmConfiguration(
                 databaseFileName: "TestMovieApp.realm",
-                databaseVersion: 1
+                databaseVersion: 4
             )
         }
     }
