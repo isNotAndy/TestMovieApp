@@ -21,6 +21,9 @@ public struct CardPlainObject: Codable, Equatable, Identifiable, Plain {
     
     /// ID of card
     public let id: String
+    
+    /// ID of deck
+    public let deckID: String
 
     /// Title of card
     public let frontTitle: String

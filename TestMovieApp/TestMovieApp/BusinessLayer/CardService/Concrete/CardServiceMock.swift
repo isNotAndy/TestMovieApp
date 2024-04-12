@@ -32,9 +32,32 @@ public final class CardServiceMock: WebService {
 
 extension CardServiceMock: CardService {
     
-    public func addCardWith(id: String, frontTitle: String, backTitle: String, status: String?) -> ServiceCall<CardPlainObject> {
+    public func readCardInfo(page: Int, pageSize: Int, deckID: DeckPlainObject.ID) -> ServiceCall<PaginatedResponsePlainObject<CardPlainObject>> {
         createCall {
-            let result = CardPlainObject(id: id, frontTitle: frontTitle, backTitle: backTitle, status: status)
+            do {
+                let cardsOfDeck = try self.dao.read(predicatedBy: NSPredicate(format: "deckID == %@", deckID))
+                let startIndex = (page - 1) * pageSize
+                let endIndex = min(startIndex + pageSize, cardsOfDeck.count)
+                let pageData = Array(cardsOfDeck[startIndex..<endIndex])
+                let paginationMetadata = PaginationMetadataPlainObject(
+                    totalObjectCount: cardsOfDeck.count,
+                    pageCount: (cardsOfDeck.count + pageSize - 1) / pageSize,
+                    currentPage: page,
+                    perPage: pageSize
+                )
+                return .success(PaginatedResponsePlainObject(
+                    pagination: paginationMetadata,
+                    array: pageData
+                ))
+            } catch {
+                return .failure(error)
+            }
+        }
+    }
+    
+    public func addCardWith(id: String, deckID: DeckPlainObject.ID, frontTitle: String, backTitle: String, status: String?) -> ServiceCall<CardPlainObject> {
+        createCall {
+            let result = CardPlainObject(id: id, deckID: deckID, frontTitle: frontTitle, backTitle: backTitle, status: nil)
             try! self.dao.persist(result)
             return .success(result)
         }
@@ -42,16 +65,5 @@ extension CardServiceMock: CardService {
     
     public func removeCard(with id: CardPlainObject.ID) {
         try! self.dao.erase(byPrimaryKey: UniqueID(rawValue: id))
-    }
-    
-    public func editCard(with id: CardPlainObject.ID) {
-        try! self.dao.read(byPrimaryKey: id)
-    }
-    
-    public func readCards() -> ServiceCall<[CardPlainObject]?> {
-        createCall {
-            let cards = try! self.dao.read()
-            return .success(cards)
-        }
     }
 }

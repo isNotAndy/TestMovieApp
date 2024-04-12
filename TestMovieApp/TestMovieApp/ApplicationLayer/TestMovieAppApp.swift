@@ -10,9 +10,21 @@ import ComposableArchitecture
 
 @main
 struct TestMovieAppApp: App {
+    
+    // MARK: - Initializers
+    
+    init() {
+        TestMovieAppAssembliesCollector.collect()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            DeckListView(
+                store: Store(
+                    initialState: DeckListState(defaultCount: 10),
+                    reducer: DeckListReducer()
+                )
+            )
         }
     }
 }

@@ -20,7 +20,7 @@ public enum DeckServiceAction: Equatable {
     // MARK: - Cases
     
     /// Retrieves card cache.
-    case getDeckCashe([DeckPlainObject]?)
+    case sendDeckCashe(DeckPlainObject)
 }
 
 // MARK: - DeckService
@@ -29,17 +29,16 @@ public protocol DeckService {
     
     /// Function to add a deck.
     /// - Returns: A service call for adding a deck.
-    func addDeck(with title: String, and id: String, and cards: [CardPlainObject]) -> ServiceCall<DeckPlainObject>
+    func addDeckWith(title: String, id: DeckPlainObject.ID) -> ServiceCall<DeckPlainObject>
     
     /// Function to remove a deck.
-    /// - Parameter id: The ID of the card to remove.
+    /// - Parameter id: The ID of the deck to remove.
     func removeDeck(with id: DeckPlainObject.ID)
     
-    /// Function to edit a decks.
-    /// - Parameter id: The ID of the card to edit.
-    func editDeck(with id: DeckPlainObject.ID)
-    
-    /// Function to read decks.
-    /// - Returns: A service call for reading decks.
-    func readDecks() -> ServiceCall<[DeckPlainObject]?>
+    /// Function to perform pagination.
+    /// - Parameters:
+    ///   - pageNumber: The page number.
+    ///   - pageSize: The size of each page.
+    /// - Returns: A service call for paginated response.
+    func readDeckInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<DeckPlainObject>>
 }
