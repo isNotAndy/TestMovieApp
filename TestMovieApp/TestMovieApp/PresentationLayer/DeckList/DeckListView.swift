@@ -41,6 +41,7 @@ public struct DeckListView: View {
                         ),
                         content: DeckListItemView.init
                     )
+                    .onDelete { viewStore.send(.deleteDeckTapped($0)) }
                 }
                 .background(
                     NavigationLink(

@@ -21,25 +21,24 @@ public struct CardListView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            ScrollView {
-                LazyVStack {
-                    Section {
-                        Button("Add Card") {
-                            viewStore.send(.actionSheetButtonTapped)
-                        }
-                        ForEachStore(
-                            store.scope(
-                                state: \.items,
-                                action: CardListAction.item
-                            ),
-                            content: CardListItemView.init
-                        )
-                        TMAPaginationView(
-                            store: store.scope(
-                                state: \.pagination.pagination,
-                                action: CardListAction.pagination)
-                        )
+            List {
+                Section {
+                    Button("Add Card") {
+                        viewStore.send(.actionSheetButtonTapped)
                     }
+                    TMAPaginationView(
+                        store: store.scope(
+                            state: \.pagination.pagination,
+                            action: CardListAction.pagination)
+                    )
+                    ForEachStore(
+                        store.scope(
+                            state: \.items,
+                            action: CardListAction.item
+                        ),
+                        content: CardListItemView.init
+                    )
+                    .onDelete { viewStore.send(.deleteCardTapped($0)) }
                 }
             }
             .sheet(

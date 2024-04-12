@@ -33,8 +33,9 @@ public enum CardListAction: Equatable {
     /// An action that calls when user taps on the `dismiss` button on the sheet
     case actionSheetDismissed
     
-    /// `CardListItem` tapped
-    case itemTepped
+    /// An action that triggers the deletion of one or more items from the list.
+    ///  The `IndexSet` parameter specifies the indices of the items to be deleted.
+    case deleteCardTapped(IndexSet)
     
     // MARK: - Reloadable
     

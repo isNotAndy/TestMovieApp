@@ -59,6 +59,11 @@ public struct DeckListReducer: Reducer {
                 }
             case .deckItemBuilder(.presented(.buttonPressed)):
                 return .send(.actionSheetDismissed)
+            case .deleteDeckTapped(let offsets):
+                for offset in offsets {
+                    let removedElement = state.items.remove(at: offset)
+                    deckService.removeDeck(with: removedElement.id)
+                }
             default:
                 break
             }

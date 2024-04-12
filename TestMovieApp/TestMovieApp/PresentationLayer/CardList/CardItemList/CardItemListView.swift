@@ -29,11 +29,13 @@ public struct CardListItemView: View {
             VStack {
                 HStack {
                     Text(viewStore.frontTitle)
+                        .font(.headline)
                     Spacer(minLength: 4)
                 }
                 .frame(height: 40)
                 HStack {
                     Text(viewStore.backTitle)
+                        .font(.footnote)
                     Spacer(minLength: 4)
                 }
                 .frame(height: 40)

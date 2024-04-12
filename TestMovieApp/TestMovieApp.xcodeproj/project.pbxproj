@@ -243,9 +243,9 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC7AA02BC01234007BD0CF /* DeckList */,
 				FBAC7AC02BC7CF2D007BD0CF /* CardList */,
 				FBAC7ABD2BC68284007BD0CF /* DesighSystem */,
-				FBAC7AA02BC01234007BD0CF /* DeckList */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";

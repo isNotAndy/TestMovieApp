@@ -48,6 +48,11 @@ public struct CardListReducer: Reducer {
                 return .send(.pagination(.reset))
             case .cardItemBuilder(.presented(.buttonPressed)):
                 return .send(.actionSheetDismissed)
+            case .deleteCardTapped(let offsets):
+                for offset in offsets {
+                    let removedElement = state.items.remove(at: offset)
+                    cardService.removeCard(with: removedElement.id)
+                }
             default:
                 break
             }

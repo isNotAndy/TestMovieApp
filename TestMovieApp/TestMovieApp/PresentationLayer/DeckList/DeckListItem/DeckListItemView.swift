@@ -31,6 +31,8 @@ public struct DeckListItemView: View {
             }, label: {
                 HStack {
                     Text(viewStore.title)
+                        .font(.callout)
+                        .foregroundColor(.primary)
                     Spacer(minLength: 4)
                 }
             })
