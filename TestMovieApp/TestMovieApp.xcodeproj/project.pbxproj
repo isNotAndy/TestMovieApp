@@ -65,6 +65,10 @@
 		FBAC7AD62BC7D21C007BD0CF /* CardItemBuilderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD52BC7D21C007BD0CF /* CardItemBuilderAction.swift */; };
 		FBAC7AD82BC7D224007BD0CF /* CardItemBuilderReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD72BC7D224007BD0CF /* CardItemBuilderReducer.swift */; };
 		FBAC7ADA2BC7D22D007BD0CF /* CardItemBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AD92BC7D22D007BD0CF /* CardItemBuilderView.swift */; };
+		FBAC7ADD2BCE721E007BD0CF /* RepeatGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ADC2BCE721E007BD0CF /* RepeatGameState.swift */; };
+		FBAC7ADF2BCE722D007BD0CF /* RepeatGameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7ADE2BCE722D007BD0CF /* RepeatGameAction.swift */; };
+		FBAC7AE12BCE7238007BD0CF /* RepeatGameReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AE02BCE7238007BD0CF /* RepeatGameReducer.swift */; };
+		FBAC7AE32BCE7243007BD0CF /* RepeatGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7AE22BCE7243007BD0CF /* RepeatGameView.swift */; };
 		FBC3102F2BB83C9300CB1FE3 /* DeckPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +125,10 @@
 		FBAC7AD52BC7D21C007BD0CF /* CardItemBuilderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderAction.swift; sourceTree = "<group>"; };
 		FBAC7AD72BC7D224007BD0CF /* CardItemBuilderReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderReducer.swift; sourceTree = "<group>"; };
 		FBAC7AD92BC7D22D007BD0CF /* CardItemBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBuilderView.swift; sourceTree = "<group>"; };
+		FBAC7ADC2BCE721E007BD0CF /* RepeatGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatGameState.swift; sourceTree = "<group>"; };
+		FBAC7ADE2BCE722D007BD0CF /* RepeatGameAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatGameAction.swift; sourceTree = "<group>"; };
+		FBAC7AE02BCE7238007BD0CF /* RepeatGameReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatGameReducer.swift; sourceTree = "<group>"; };
+		FBAC7AE22BCE7243007BD0CF /* RepeatGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatGameView.swift; sourceTree = "<group>"; };
 		FBC3102E2BB83C9300CB1FE3 /* DeckPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlainObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +251,7 @@
 		FB6E76022BB19BF100D5C117 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC7ADB2BCE7203007BD0CF /* RepeatGame */,
 				FBAC7AA02BC01234007BD0CF /* DeckList */,
 				FBAC7AC02BC7CF2D007BD0CF /* CardList */,
 				FBAC7ABD2BC68284007BD0CF /* DesighSystem */,
@@ -481,6 +490,17 @@
 			path = CardItemBuilder;
 			sourceTree = "<group>";
 		};
+		FBAC7ADB2BCE7203007BD0CF /* RepeatGame */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC7ADC2BCE721E007BD0CF /* RepeatGameState.swift */,
+				FBAC7ADE2BCE722D007BD0CF /* RepeatGameAction.swift */,
+				FBAC7AE02BCE7238007BD0CF /* RepeatGameReducer.swift */,
+				FBAC7AE22BCE7243007BD0CF /* RepeatGameView.swift */,
+			);
+			path = RepeatGame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -571,8 +591,10 @@
 				FBAC7AA42BC01253007BD0CF /* DeckListAction.swift in Sources */,
 				FBAC7AC42BC7D138007BD0CF /* CardListState.swift in Sources */,
 				FBAC7ACC2BC7D17E007BD0CF /* CardItemListState.swift in Sources */,
+				FBAC7ADD2BCE721E007BD0CF /* RepeatGameState.swift in Sources */,
 				FB6E764C2BB6A8DE00D5C117 /* Swinjectable.swift in Sources */,
 				FBAC7AD62BC7D21C007BD0CF /* CardItemBuilderAction.swift in Sources */,
+				FBAC7ADF2BCE722D007BD0CF /* RepeatGameAction.swift in Sources */,
 				FBAC7A9A2BBFF63E007BD0CF /* TranslatorsAssembly.swift in Sources */,
 				FBAC7AAB2BC0134E007BD0CF /* DeckListItemAction.swift in Sources */,
 				FBAC7AB82BC0359A007BD0CF /* DeckItemBuilderReducer.swift in Sources */,
@@ -581,6 +603,7 @@
 				FB7AEF6D2BB6B46200CF2801 /* CardModelObject.swift in Sources */,
 				FB6E76562BB6AACB00D5C117 /* CollectableAssembly.swift in Sources */,
 				FBAC7A932BBFEE30007BD0CF /* AppConstants.swift in Sources */,
+				FBAC7AE32BCE7243007BD0CF /* RepeatGameView.swift in Sources */,
 				FB7AEF6A2BB6B1E200CF2801 /* CardPlainObject.swift in Sources */,
 				FBAC7AD02BC7D18A007BD0CF /* CardItemListReducer.swift in Sources */,
 				FB6E76532BB6AA2100D5C117 /* TestMovieAppAssembliesCollector.swift in Sources */,
@@ -611,6 +634,7 @@
 				FB6E76582BB6AAE500D5C117 /* AssembliesHolder.swift in Sources */,
 				FBAC7AB42BC03577007BD0CF /* DeckItemBuilderState.swift in Sources */,
 				FBAC7AC62BC7D141007BD0CF /* CardListAction.swift in Sources */,
+				FBAC7AE12BCE7238007BD0CF /* RepeatGameReducer.swift in Sources */,
 				FB2461052BBEA9A000C17D19 /* CardServiceMock.swift in Sources */,
 				FBAC7AD82BC7D224007BD0CF /* CardItemBuilderReducer.swift in Sources */,
 				FB2461112BBFE4FB00C17D19 /* DeckTranslator.swift in Sources */,

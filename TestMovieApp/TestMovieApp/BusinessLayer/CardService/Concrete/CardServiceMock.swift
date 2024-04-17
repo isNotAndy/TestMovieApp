@@ -32,6 +32,17 @@ public final class CardServiceMock: WebService {
 
 extension CardServiceMock: CardService {
     
+    public func readCardInfo(deckID: DeckPlainObject.ID) -> ServiceCall<[CardPlainObject]> {
+        createCall {
+            do {
+                let cardsOfDeck = try self.dao.read(predicatedBy: NSPredicate(format: "deckID == %@", deckID))
+                return .success(cardsOfDeck)
+            } catch {
+                return .failure(error)
+            }
+        }
+    }
+    
     public func readCardInfo(page: Int, pageSize: Int, deckID: DeckPlainObject.ID) -> ServiceCall<PaginatedResponsePlainObject<CardPlainObject>> {
         createCall {
             do {

@@ -25,7 +25,7 @@ public struct CardListReducer: Reducer {
             state: \.pagination,
             action: /CardListAction.pagination
         ) {
-             IDPaginationReducer { id, pageNumber, pageSize  in
+            IDPaginationReducer { id, pageNumber, pageSize  in
                 cardService
                     .readCardInfo(page: pageNumber, pageSize: pageSize, deckID: id)
                     .publish()
@@ -53,10 +53,29 @@ public struct CardListReducer: Reducer {
                     let removedElement = state.items.remove(at: offset)
                     cardService.removeCard(with: removedElement.id)
                 }
+            case .repeatGameButtonTapped:
+                let _ = cardService
+                    .readCardInfo(deckID: state.deckID)
+                    .publish()
+                    .map(CardServiceAction.cardsReaded)
+                    .catchToEffect(CardListAction.cardService)
+                if state.items != [] {
+                    state.repeatGame = RepeatGameState(deckID: state.deckID)
+                } else {
+                    state.alert = AlertState(
+                        title: "Error",
+                        message: "There are no cards in deck"
+                    )
+                }
+            case .alertDismissed:
+                state.alert = nil
             default:
                 break
             }
             return .none
+        }
+        .ifLet(\.$repeatGame, action: /CardListAction.repeatGame) {
+            RepeatGameReducer()
         }
         .ifLet(\.$cardItemBuilder, action: /CardListAction.cardItemBuilder) {
             CardItemBuilderReducer()

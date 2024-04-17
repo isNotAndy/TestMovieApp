@@ -23,9 +23,6 @@ public struct CardListView: View {
         WithViewStore(store) { viewStore in
             List {
                 Section {
-                    Button("Add Card") {
-                        viewStore.send(.actionSheetButtonTapped)
-                    }
                     TMAPaginationView(
                         store: store.scope(
                             state: \.pagination.pagination,
@@ -41,6 +38,10 @@ public struct CardListView: View {
                     .onDelete { viewStore.send(.deleteCardTapped($0)) }
                 }
             }
+            .alert(
+                store.scope(state: \.alert),
+                dismiss: .alertDismissed
+            )
             .sheet(
                 store: store.scope(
                     state: \.$cardItemBuilder,
@@ -49,6 +50,30 @@ public struct CardListView: View {
                     viewStore.send(.actionSheetDismissed)
                 },
                 content: CardItemBuilderView.init
+            )
+            HStack(spacing: 0) {
+                Button("Add Card") {
+                    viewStore.send(.actionSheetButtonTapped)
+                }
+                .padding(8)
+                Spacer(minLength: 0)
+                Button("Repeat cards") {
+                    viewStore.send(.repeatGameButtonTapped)
+                }
+                .padding(8)
+            }
+            .background(
+                NavigationLinkStore(
+                    store.scope(
+                        state: \.$repeatGame,
+                        action: CardListAction.repeatGame
+                    ),
+                    onTap: {},
+                    destination: RepeatGameView.init,
+                    label: {
+                        EmptyView()
+                    }
+                )
             )
         }
     }

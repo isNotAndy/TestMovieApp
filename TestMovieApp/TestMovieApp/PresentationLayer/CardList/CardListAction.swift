@@ -33,9 +33,15 @@ public enum CardListAction: Equatable {
     /// An action that calls when user taps on the `dismiss` button on the sheet
     case actionSheetDismissed
     
+    /// An action that calls when user taps on the button that activates `RepeatGame`
+    case repeatGameButtonTapped
+    
     /// An action that triggers the deletion of one or more items from the list.
     ///  The `IndexSet` parameter specifies the indices of the items to be deleted.
     case deleteCardTapped(IndexSet)
+    
+    /// An action that calls when user taps on the `dismiss` button on the alert
+    case alertDismissed
     
     // MARK: - Reloadable
     
@@ -55,7 +61,19 @@ public enum CardListAction: Equatable {
     /// will be sent to current module through it
     case cardItemBuilder(PresentationAction<CardItemBuilderAction>)
     
+    /// Child action for `RepeatGame` module.
+    ///
+    /// It's necessary as we use `Scope` reducer in current module's reducer.
+    /// In short, the `repeatGame` case means that every action in `repeatGame` module
+    /// will be sent to current module through it
+    case repeatGame(PresentationAction<RepeatGameAction>)
+    
     // MARK: - Pagination
     
     case pagination(PaginationAction<CardPlainObject, CardServiceError>)
+    
+    // MARK: - Service
+    
+    /// Responce of the `CardService` generation method
+    case cardService(Result<CardServiceAction, NSError>)
 }

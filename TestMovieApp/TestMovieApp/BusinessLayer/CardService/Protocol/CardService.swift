@@ -21,6 +21,9 @@ public enum CardServiceAction: Equatable {
     
     /// Retrieves card cache.
     case sendCardCashe(CardPlainObject)
+    
+    /// Indicates that cards have been read.
+    case cardsReaded([CardPlainObject])
 }
 
 // MARK: - CardService
@@ -41,4 +44,11 @@ public protocol CardService {
     ///   - pageSize: The size of each page.
     /// - Returns: A service call for paginated response.
     func readCardInfo(page: Int, pageSize: Int, deckID: DeckPlainObject.ID) -> ServiceCall<PaginatedResponsePlainObject<CardPlainObject>>
+    
+    /// Function to read card's.
+    /// - Parameters:
+    ///   - pageNumber: The page number.
+    ///   - pageSize: The size of each page.
+    /// - Returns: A service call for paginated response.
+    func readCardInfo(deckID: DeckPlainObject.ID) -> ServiceCall<[CardPlainObject]>
 }

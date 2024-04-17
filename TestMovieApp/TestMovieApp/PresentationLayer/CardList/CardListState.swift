@@ -21,6 +21,9 @@ public struct CardListState: Equatable {
     /// ID of `DeckItem`
     public let deckID: DeckPlainObject.ID
     
+    /// Currently displaying alert
+    public var alert: AlertState<CardListAction>?
+    
     // MARK: - Children
     
     /// An array of items representing the data to be displayed in the interactive list.
@@ -36,6 +39,14 @@ public struct CardListState: Equatable {
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `counter` module all changes will be saved here.
     @PresentationState public var cardItemBuilder: CardItemBuilderState!
+    
+    /// `RepeatGameState` instance
+    ///
+    /// It's an instance of `RepeatGame` submodule.
+    /// We use it here to be able to integrate `RepeatGame` feature into a current module logic.
+    /// All necessary processing is placed inside current reducer. Also, if you change the state
+    /// inside the `counter` module all changes will be saved here.
+    @PresentationState public var repeatGame: RepeatGameState!
     
     // MARK: - Relodable
     
